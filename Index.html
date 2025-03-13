@@ -5,21 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paki-Note!</title>
     <link rel="stylesheet" href="./Assets/styles.css">
+    <link rel="stylesheet" href="./Assets/styles2.css">
 </head>
 <body>
     <nav>
         <ul class="nav-links">
-          <li><a href="#">Home</a></li>
+          <li><a href="#welcome">Home</a></li>
           <li class="dropdown">
             <a href="#">Create ▼</a>
             <ul class="dropdown-menu">
-              <li><a href="#">Notes</a></li>
-              <li><a href="#">Calendar</a></li>
-              <li><a href="#">Quiz</a></li>
+              <li><a href="./Pages/notes.html">Notes</a></li>
+              <li><a href="./Pages/calendar.html">Calendar</a></li>
+              <li><a href="./Pages/quiz.html">Quiz</a></li>
             </ul>
           </li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">FAQs</a></li>
+          <li><a href="#contact">Contacts</a></li>
+          <li><a href="#faq">FAQs</a></li>
+          <li><a href="#about">About</a></li>
         </ul>
       </nav>
           
@@ -36,9 +38,76 @@
          Take Notes & Challenge yourself into taking quizzes <br> Making you study better!</b> 
     </p>
 
+    <section class="about" id="about">
+        <div class="about-container">
+          <h1>About Paki-Note!</h1>
+        <p>Paki Note! is a simple yet powerful tool designed for college students to
+            <b>Organize schedules, Take notes more effectively, and Generate quizzes based on your notes</b> effortlessly.
+        </p>
+      
+          <h2>Features:</h2>
+          <ul>
+            <li>Note-Taking - Categorize and format notes with ease.</li>
+            <li>Schedule & Reminders - Manage your tasks with a calendar.</li>
+            <li>Auto-Generated Quizzes - Turn notes into interactive quizzes.</li>
+          </ul>
+      
+          <h2> Why Use Paki-Note?</h2>
+        <p>We all know how <b>Overwhelming</b> college life can be.
+            <br>Especially for many first year students. <br> 
+            But with Paki-Note! we help students <br><b>Stay organized, Save time, 
+            and Study smarter.</b> 
+            <br>No complicated setups, just a <b>simple and intuitive</b> experience.
+        
+        </p>
+        </div>
+      </section>
 
-    <section class="contact">
-        <h2>📩 Get in Touch with us!</h2>
+      <section class="faq" id="faq">
+        <div class="faq-container">
+          <h2>Frequently Asked Questions</h2>
+      
+          <div class="faq-item">
+            <button class="faq-question">How does Paki-Note! work?</button>
+            <div class="faq-answer">
+              <p>Paki-Note! lets you create Categorized notes, set reminders, 
+                and generate quizzes based on your notes. Everything is stored in your local browser.</p>
+            </div>
+          </div>
+      
+          <div class="faq-item">
+            <button class="faq-question">Do I need to create an account?</button>
+            <div class="faq-answer">
+              <p>Nope! as of now Paki Note! only uses local browser storage, so currently no login is required.</p>
+            </div>
+          </div>
+      
+          <div class="faq-item">
+            <button class="faq-question">How are the quizzes generated?</button>
+            <div class="faq-answer">
+              <p>Quizzes are automatically created using key points from your recent saved notes. 
+                You can choose between <b>multiple-choice, fill-in-the-blanks, and true/false questions.</b></p>
+            </div>
+          </div>
+      
+          <div class="faq-item">
+            <button class="faq-question">Can I customize my notes?</button>
+            <div class="faq-answer">
+              <p>Ofcourse! You can change fonts, colors, and organize notes by subject or categories    .</p>
+            </div>
+          </div>
+      
+          <div class="faq-item">
+            <button class="faq-question">Can I reset or delete my notes and schedule?</button>
+            <div class="faq-answer">
+              <p>"Yes! You can clear your notes and schedule from the settings. However, once deleted, they cannot be recovered."</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <section class="contact" id="contact">
+        <h2>Get in Touch with us!</h2>
         <p>Have questions or feedback? Let us know!</p>
       
         <form action="#" method="POST">
@@ -63,9 +132,9 @@
         <div class="socials">
           <p>Or reach out to us via:</p>
           <a href="#">📧 Email: contact@pakinote.com</a>
-          <a href="#">🐦 Twitter</a>
           <a href="#">📘 Facebook</a>
         </div>
       </section>
+
 </body>
 </html>

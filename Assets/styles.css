@@ -1,3 +1,8 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+
 body {
     font-family: Arial, sans-serif;
     background-color: #e0f7fa;
@@ -102,9 +107,9 @@ a {
 .contact {
     text-align: center;
     padding: 40px;
-    background: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: #caebf0;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     margin: 50px auto;
     max-width: 600px;
   }
@@ -138,7 +143,7 @@ a {
   }
   
   .sndbtn {
-    background: #007bff;
+    background: #00796b;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -147,7 +152,7 @@ a {
   }
   
   .sndbtn:hover {
-    background: #0056b3;
+    background: #01584e;
   }
   
   .socials {
