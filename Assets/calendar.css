@@ -1,0 +1,42 @@
+body {
+     font-family: Arial, sans-serif;
+     background-color: #e8f5e9;
+     color: #333;
+     margin: 0;
+     padding: 20px;
+ }
+ 
+ header {
+     text-align: center;
+     margin-bottom: 20px;
+ }
+ 
+ h1 {
+     color: #388e3c;
+ }
+ 
+ button {
+     padding: 10px 15px;
+     background-color: #388e3c;
+     color: white;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     margin-top: 10px;
+ }
+ 
+ button:hover {
+     background-color: #1b5e20;
+ }
+ 
+ #calendar {
+     margin-top: 20px;
+ }
+ 
+ input[type="date"], input[type="text"] {
+     width: calc(100% - 22px);
+     padding: 10px;
+     margin-bottom: 10px;
+     border-radius: 5px;
+     border: 1px solid #ccc;
+ }

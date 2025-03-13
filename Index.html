@@ -1,12 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="./Assets/styles.css">
-     <title>Paki-Note!!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paki-Note!</title>
+    <link rel="stylesheet" href="./Assets/styles.css">
 </head>
 <body>
-     <div class="background"></div>
+    <nav>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Create ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Notes</a></li>
+              <li><a href="#">Calendar</a></li>
+              <li><a href="#">Quiz</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </nav>
+          
+    <div id="welcome">
+        <h1>Paki-Note!</h1>
+        <p>Your personal study companion!</p>
+        <button onclick="location.href='./Pages/notes.html'">
+            <span>Take Notes!</span>
+        </button>        
+        <button onclick="location.href='./Pages/calendar.html'">Manage Calendar!</button>
+        <button onclick="location.href='./Pages/quiz.html'">Take Quiz!</a></button>
+    </div>
+    <p class="bltext">With this Site, we can help YOU <br><b>Organize Schedules,
+         Take Notes & Challenge yourself into taking quizzes <br> Making you study better!</b> 
+    </p>
+
+
+    <section class="contact">
+        <h2>📩 Get in Touch with us!</h2>
+        <p>Have questions or feedback? Let us know!</p>
+      
+        <form action="#" method="POST">
+          <div class="inpt-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+          </div>
+      
+          <div class="inpt-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+      
+          <div class="inpt-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+          </div>
+      
+          <button class="sndbtn" type="submit">Send Message</button>
+        </form>
+      
+        <div class="socials">
+          <p>Or reach out to us via:</p>
+          <a href="#">📧 Email: contact@pakinote.com</a>
+          <a href="#">🐦 Twitter</a>
+          <a href="#">📘 Facebook</a>
+        </div>
+      </section>
 </body>
 </html>

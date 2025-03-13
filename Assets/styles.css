@@ -1,12 +1,167 @@
-.background {
-     background-image: url('../images/classroom.jpg');
-     background-size: cover;
-     background-position: center;
-     background-repeat: no-repeat;
-     height: 100vh;
-     width: 100vw;
-     position: fixed;
-     top: 0;
-     left: 0;
- }
- 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background: #004d40;
+    padding: 10px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li {
+    position: relative;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #444;
+    list-style: none;
+    top: 100%;
+    left: 0;
+    width: 150px;
+    padding: 0;
+  }
+  
+  .dropdown-menu li {
+    padding: 10px;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px 20px;
+    border-radius: 10%;
+}
+
+#welcome {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    color: #00796b;
+    font-size: 4em;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+.bltext {
+    text-align: center;
+    margin: 50px 0;
+}
+
+button {
+    padding: 80px 80px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 2em;
+    margin: 10px;
+    transition: background-color 0.4s;
+    border: #333 2px solid;
+}
+
+button:hover {
+    background-color: #004d40; 
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.contact {
+    text-align: center;
+    padding: 40px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    max-width: 600px;
+  }
+  
+  .contact h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .contact p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .inpt-group {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+  
+  .inpt-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .inpt-group input, .inpt-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .sndbtn {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .sndbtn:hover {
+    background: #0056b3;
+  }
+  
+  .socials {
+    margin-top: 20px;
+  }
+  
+  .socials a {
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+    margin-top: 5px;
+  }
+  
+  .socials a:hover {
+    text-decoration: underline;
+  }
+  
