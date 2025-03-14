@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paki-Note! - Take Notes</title>
-    <link rel="stylesheet" href="../Assets/notes.css">
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Test</title>
+     <link rel="stylesheet" href="../Assets/notes.css">
+     <script src="./notes.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Paki-Note!</h1>
-        <button onclick="location.href='../Index.html'">Back to Home</button>
-    </header>
-    <main>
-        <section id="notes">
-            <h2>Notes</h2>
-            <textarea id="noteInput" placeholder="Write your notes here..."></textarea>
-            <input type="text" id="noteTag" placeholder="Tag your note...">
-            <button id="saveNote">Save Note</button>
-            <div id="noteList"></div>
-        </section>
-    </main>
-    <script src="script.js"></script>
+     <div id="inpt-container">
+          <textarea type="text" id="inpt" class="inpt" placeholder="Type here..."></textarea>
+     </div>
+     <div id="note-container">
+          <h3>Your notes:</h3>
+          <ul id="note-list" class="note-list">
+               
+          </ul>
+     </div>
+     <div id="category-container">
+          <h3>Select category!</h3>
+     
+     <select id="category" class="category" title="Select category">
+          <option value="work">Science</option>
+          <option value="personal">Math</option>
+          <option value="study">History</option>
+          <option value="others">PE</option>
+     </select>
+          <button id="btn">Note!</button>
+     </div>
 </body>
 </html>
