@@ -1,13 +1,11 @@
-/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #e0f7fa;
     color: #333;
     margin: 0;
-    padding-top: 60px; /* Space for fixed navigation */
+    padding-top: 60px;
 }
 
-/* Navigation Styles */
 nav {
     background: rgba(0, 77, 64, 0.95);
     padding: 15px 20px;
@@ -48,7 +46,6 @@ nav {
     color: #80cbc4;
 }
 
-/* Dropdown Menu Styles */
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -72,7 +69,6 @@ nav {
     display: block;
 }
 
-/* Notes Content Styles */
 .notes-content {
     max-width: 1200px;
     margin: 20px auto;
@@ -170,7 +166,6 @@ h3 {
     transform: translateY(-2px);
 }
 
-/* Note List Styles */
 .note-list {
     list-style: none;
     padding: 0;
@@ -249,7 +244,6 @@ h3 {
     margin-top: 20px;
 }
 
-/* Category Management Styles */
 .category-management {
     display: flex;
     flex-direction: column;
@@ -278,7 +272,6 @@ h3 {
     transform: translateY(-2px);
 }
 
-/* Modal Styles */
 .modal {
     display: none;
     position: fixed;

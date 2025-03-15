@@ -7,18 +7,57 @@
     <link rel="stylesheet" href="../Assets/quiz.css">
 </head>
 <body>
-    <header>
-        <h1>Paki-Note!</h1>
-        <button onclick="location.href='index.html'">Back to Home</button>
-    </header>
-    <main>
-        <section id="quiz">
-            <h2>Quiz</h2>
-            <input type="number" id="questionCount" placeholder="Number of Questions">
-            <button id="startQuiz">Start Quiz</button>
-            <div id="quizContainer"></div>
-        </section>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Features ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="notes.html">Notes</a></li>
+                    <li><a href="calendar.html">Calendar</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="gpa.html">GPA Calculator</a></li>
+                </ul>
+            </li>
+            <li><a href="../index.html#contact">Contacts</a></li>
+            <li><a href="../index.html#faq">FAQs</a></li>
+            <li><a href="../index.html#about">About</a></li>
+        </ul>
+    </nav>
+
+    <main class="quiz-content">
+        <h1>Quiz Time!</h1>
+        <div class="quiz-setup">
+            <div class="quiz-options">
+                <div class="option-group">
+                    <label for="categorySelect">Select Category:</label>
+                    <select id="categorySelect" class="quiz-select">
+                        <option value="all">All Categories</option>
+                    </select>
+                </div>
+                <div class="option-group">
+                    <label for="questionCount">Number of Questions:</label>
+                    <input type="number" id="questionCount" min="1" max="20" value="5">
+                </div>
+                <div class="option-group">
+                    <label for="quizType">Question Type:</label>
+                    <select id="quizType" class="quiz-select">
+                        <option value="multiple">Multiple Choice</option>
+                        <option value="truefalse">True/False</option>
+                        <option value="fillblank">Fill in the Blank</option>
+                    </select>
+                </div>
+            </div>
+            <button id="startQuiz" class="primary-btn">Generate Quiz</button>
+        </div>
+
+        <div id="quizContainer" class="quiz-container">
+        </div>
+
+        <div id="quizResults" class="quiz-results">
+        </div>
     </main>
-    <script src="script.js"></script>
+
+    <script src="../Script/quiz.js"></script>
 </body>
 </html>

@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paki-Note! - Calendar</title>
-    <link rel="stylesheet" href="../Assets/styles.css">
     <link rel="stylesheet" href="../Assets/calendar.css">
 </head>
 <body>
     <nav>
         <ul class="nav-links">
-            <li><a href="../index.html#welcome">Home</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li class="dropdown">
                 <a href="#">Features ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="notes.html">Notes</a></li>
                     <li><a href="calendar.html">Calendar</a></li>
                     <li><a href="quiz.html">Quiz</a></li>
-                    <li><a href="gpa.html">Gpa Calculator</a></li>
+                    <li><a href="gpa.html">GPA Calculator</a></li>
                 </ul>
             </li>
             <li><a href="../index.html#contact">Contacts</a></li>
@@ -25,15 +24,19 @@
             <li><a href="../index.html#about">About</a></li>
         </ul>
     </nav>
+    
     <main>
         <section id="calendar">
             <h2>Calendar</h2>
-            <input type="date" id="eventDate" title="eventDate">
-            <input type="text" id="eventDescription" placeholder="Event Description">
-            <button id="addEvent">Add Event</button>
+            <div class="event-input">
+                <input type="date" id="eventDate" title="Event Date">
+                <input type="text" id="eventDescription" placeholder="Event Description">
+                <button id="addEvent">Add Event</button>
+            </div>
             <div id="eventList"></div>
         </section>
     </main>
+
     <script src="../Script/calendar.js"></script>
 </body>
 </html>
