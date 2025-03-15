@@ -67,6 +67,15 @@ nav {
     margin-top: 50px;
 }
 
+#welcome .button-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
 h1 {
     color: #00796b;
     font-size: 4em;
@@ -83,20 +92,53 @@ p {
 }
 
 button {
-    padding: 80px 80px;
-    background-color: #00796b;
+    padding: 25px 40px;
+    background: linear-gradient(145deg, #009688, #00796b);
     color: white;
     border: none;
-    border-radius: 40px;
+    border-radius: 15px;
     cursor: pointer;
-    font-size: 2em;
-    margin: 10px;
-    transition: background-color 0.4s;
-    border: #333 2px solid;
+    font-size: 1.5em;
+    margin: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 button:hover {
-    background-color: #004d40; 
+    background: linear-gradient(145deg, #00bfa5, #00897b);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+.calendar_btn {
+    background: linear-gradient(145deg, #26a69a, #00897b);
+}
+
+.calendar_btn:hover {
+    background: linear-gradient(145deg, #2ed3c2, #00a18c);
+}
+
+.quiz_btn {
+    background: linear-gradient(145deg, #00acc1, #0097a7);
+}
+
+.quiz_btn:hover {
+    background: linear-gradient(145deg, #00e5ff, #00b8d4);
+}
+
+.gpa_btn {
+    background: linear-gradient(145deg, #26c6da, #00acc1);
+}
+
+.gpa_btn:hover {
+    background: linear-gradient(145deg, #40dcef, #00bcd4);
 }
 
 a {

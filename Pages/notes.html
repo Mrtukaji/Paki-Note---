@@ -8,6 +8,24 @@
      <script src="./notes.js"></script>
 </head>
 <body>
+    <nav>
+        <ul class="nav-links">
+          <li><a href="#welcome">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Create ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="./Pages/notes.html">Notes</a></li>
+              <li><a href="./Pages/calendar.html">Calendar</a></li>
+              <li><a href="./Pages/quiz.html">Quiz</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contacts</a></li>
+          <li><a href="#faq">FAQs</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+      
+    <h1>Paki-Note!</h1>
      <div id="inpt-container">
           <textarea type="text" id="inpt" class="inpt" placeholder="Type here..."></textarea>
      </div>
@@ -28,5 +46,6 @@
      </select>
           <button id="btn">Note!</button>
      </div>
+     <button onclick="location.href='../Index.html'">Back to Home</button>
 </body>
 </html>

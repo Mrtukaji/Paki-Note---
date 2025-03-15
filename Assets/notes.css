@@ -6,6 +6,57 @@ body {
     gap: 20px;
     padding: 20px;
 }
+nav {
+    background: #004d40;
+    padding: 10px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li {
+    position: relative;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #444;
+    list-style: none;
+    top: 100%;
+    left: 0;
+    width: 150px;
+    padding: 0;
+  }
+  
+  .dropdown-menu li {
+    padding: 10px;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px 20px;
+    border-radius: 10%;
+}
+
 
 .inpt {
     width: 800px;

@@ -12,11 +12,12 @@
         <ul class="nav-links">
           <li><a href="#welcome">Home</a></li>
           <li class="dropdown">
-            <a href="#">Create ▼</a>
+            <a href="#">Features ▼</a>
             <ul class="dropdown-menu">
               <li><a href="./Pages/notes.html">Notes</a></li>
               <li><a href="./Pages/calendar.html">Calendar</a></li>
               <li><a href="./Pages/quiz.html">Quiz</a></li>
+              <li><a href="./Pages/gpa.html">Gpa Calculator</a></li>
             </ul>
           </li>
           <li><a href="#contact">Contacts</a></li>
@@ -28,11 +29,14 @@
     <div id="welcome">
         <h1>Paki-Note!</h1>
         <p>Your personal study companion!</p>
-        <button onclick="location.href='./Pages/notes.html'">
-            <span>Take Notes!</span>
-        </button>        
-        <button onclick="location.href='./Pages/calendar.html'">Manage Calendar!</button>
-        <button onclick="location.href='./Pages/quiz.html'">Take Quiz!</a></button>
+        <div class="button-container">
+            <button onclick="location.href='./Pages/notes.html'">
+                <span>Take Notes!</span>
+            </button>        
+            <button onclick="location.href='./Pages/calendar.html'" class="calendar_btn">Manage Calendar!</button>
+            <button onclick="location.href='./Pages/quiz.html'" class="quiz_btn">Take Quiz!</button>
+            <button onclick="location.href='./Pages/gpa.html'" class="gpa_btn">Check GPA!</button>
+        </div>
     </div>
     <p class="bltext">With this Site, we can help YOU <br><b>Organize Schedules,
          Take Notes & Challenge yourself into taking quizzes <br> Making you study better!</b> 
@@ -70,7 +74,7 @@
           <div class="faq-item">
             <button class="faq-question">How does Paki-Note! work?</button>
             <div class="faq-answer">
-              <p>Paki-Note! lets you create Categorized notes, set reminders, 
+              <p>Paki-Note! lets you create Categorized notes, fixs your messy schedule, 
                 and generate quizzes based on your notes. Everything is stored in your local browser.</p>
             </div>
           </div>

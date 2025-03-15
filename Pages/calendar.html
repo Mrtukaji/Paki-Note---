@@ -4,13 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paki-Note! - Calendar</title>
+    <link rel="stylesheet" href="../Assets/styles.css">
     <link rel="stylesheet" href="../Assets/calendar.css">
 </head>
 <body>
-    <header>
-        <h1>Paki-Note!</h1>
-        <button onclick="location.href='index.html'">Back to Home</button>
-    </header>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="../index.html#welcome">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Features ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="notes.html">Notes</a></li>
+                    <li><a href="calendar.html">Calendar</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="gpa.html">Gpa Calculator</a></li>
+                </ul>
+            </li>
+            <li><a href="../index.html#contact">Contacts</a></li>
+            <li><a href="../index.html#faq">FAQs</a></li>
+            <li><a href="../index.html#about">About</a></li>
+        </ul>
+    </nav>
     <main>
         <section id="calendar">
             <h2>Calendar</h2>
@@ -20,6 +34,6 @@
             <div id="eventList"></div>
         </section>
     </main>
-    <script src="script.js"></script>
+    <script src="../Script/calendar.js"></script>
 </body>
 </html>
