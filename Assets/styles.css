@@ -1,16 +1,17 @@
+/* Global Styles */
 html {
     scroll-behavior: smooth;
-  }
-  
+}
 
 body {
     font-family: Arial, sans-serif;
     background-color: #e0f7fa;
     color: #333;
     margin: 0;
-    padding-top: 60px;
+    padding-top: 60px; /* Space for fixed navigation */
 }
 
+/* Navigation Styles */
 nav {
     background: rgba(0, 77, 64, 0.95);
     padding: 15px 20px;
@@ -26,7 +27,7 @@ nav {
     justify-content: space-between;
     align-items: center;
 }
-  
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -34,55 +35,48 @@ nav {
     margin: 0;
     padding: 0;
 }
-  
+
 .nav-links li {
     position: relative;
 }
-  
+
 .nav-links a {
     color: white;
     text-decoration: none;
     padding: 10px;
     display: block;
+    transition: color 0.3s ease;
 }
 
-.nav-title {
-    color: white;
-    font-size: 1.5em;
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
+.nav-links a:hover {
+    color: #80cbc4;
 }
-  
+
+/* Dropdown Menu Styles */
 .dropdown-menu {
     display: none;
     position: absolute;
-    background: #444;
+    background: rgba(68, 68, 68, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     list-style: none;
     top: 100%;
     left: 0;
     width: 150px;
     padding: 0;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-  
+
 .dropdown-menu li {
     padding: 10px;
 }
-  
+
 .dropdown:hover .dropdown-menu {
     display: block;
 }
-  
 
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin: 0 auto;
-    padding: 15px 20px;
-    border-radius: 10%;
-}
-
+/* Welcome Section Styles */
 #welcome {
     text-align: center;
     margin-top: 120px;
@@ -97,6 +91,7 @@ nav {
     padding: 0 20px;
 }
 
+/* Typography */
 h1 {
     color: #00796b;
     font-size: 4em;
@@ -112,6 +107,7 @@ p {
     margin: 50px 0;
 }
 
+/* Button Styles */
 button {
     padding: 25px 40px;
     background: linear-gradient(145deg, #009688, #00796b);
@@ -138,6 +134,7 @@ button:active {
     transform: translateY(1px);
 }
 
+/* Feature Button Variants */
 .calendar_btn {
     background: linear-gradient(145deg, #26a69a, #00897b);
 }
@@ -162,11 +159,7 @@ button:active {
     background: linear-gradient(145deg, #40dcef, #00bcd4);
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
-
+/* Contact Section Styles */
 .contact {
     text-align: center;
     padding: 40px;
@@ -175,61 +168,64 @@ a {
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     margin: 50px auto;
     max-width: 600px;
-  }
-  
-  .contact h2 {
+}
+
+.contact h2 {
     font-size: 24px;
     color: #333;
-  }
-  
-  .contact p {
+}
+
+.contact p {
     font-size: 16px;
     color: #555;
-  }
-  
-  .inpt-group {
+}
+
+/* Form Styles */
+.inpt-group {
     text-align: left;
     margin-bottom: 30px;
-  }
-  
-  .inpt-group label {
+}
+
+.inpt-group label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
-  }
-  
-  .inpt-group input, .inpt-group textarea {
+}
+
+.inpt-group input,
+.inpt-group textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-  }
-  
-  .sndbtn {
+}
+
+.sndbtn {
     background: #00796b;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  .sndbtn:hover {
+}
+
+.sndbtn:hover {
     background: #01584e;
-  }
-  
-  .socials {
+}
+
+/* Social Links */
+.socials {
     margin-top: 20px;
-  }
-  
-  .socials a {
+}
+
+.socials a {
     display: block;
     color: #007bff;
     text-decoration: none;
     margin-top: 5px;
-  }
-  
-  .socials a:hover {
+}
+
+.socials a:hover {
     text-decoration: underline;
-  }
+}
   

@@ -3,49 +3,63 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Test</title>
+     <title>Paki-Note! - Notes</title>
      <link rel="stylesheet" href="../Assets/notes.css">
      <script src="./notes.js"></script>
 </head>
 <body>
     <nav>
         <ul class="nav-links">
-          <li><a href="#welcome">Home</a></li>
+          <li><a href="../Index.html">Home</a></li>
           <li class="dropdown">
-            <a href="#">Create ▼</a>
+            <a href="#">Features ▼</a>
             <ul class="dropdown-menu">
-              <li><a href="./Pages/notes.html">Notes</a></li>
-              <li><a href="./Pages/calendar.html">Calendar</a></li>
-              <li><a href="./Pages/quiz.html">Quiz</a></li>
+              <li><a href="./notes.html">Notes</a></li>
+              <li><a href="./calendar.html">Calendar</a></li>
+              <li><a href="./quiz.html">Quiz</a></li>
+              <li><a href="./gpa.html">GPA Calculator</a></li>
             </ul>
           </li>
-          <li><a href="#contact">Contacts</a></li>
-          <li><a href="#faq">FAQs</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="../Index.html#contact">Contacts</a></li>
+          <li><a href="../Index.html#faq">FAQs</a></li>
+          <li><a href="../Index.html#about">About</a></li>
         </ul>
-      </nav>
+    </nav>
       
-    <h1>Paki-Note!</h1>
-     <div id="inpt-container">
-          <textarea type="text" id="inpt" class="inpt" placeholder="Type here..."></textarea>
-     </div>
-     <div id="note-container">
-          <h3>Your notes:</h3>
-          <ul id="note-list" class="note-list">
-               
-          </ul>
-     </div>
-     <div id="category-container">
-          <h3>Select category!</h3>
-     
-     <select id="category" class="category" title="Select category">
-          <option value="work">Science</option>
-          <option value="personal">Math</option>
-          <option value="study">History</option>
-          <option value="others">PE</option>
-     </select>
-          <button id="btn">Note!</button>
-     </div>
-     <button onclick="location.href='../Index.html'">Back to Home</button>
+    <main class="notes-content">
+        <h1>Paki-Note!</h1>
+        <div id="inpt-container">
+            <textarea type="text" id="inpt" class="inpt" placeholder="Type here..."></textarea>
+        </div>
+        <div id="note-container">
+            <h3>Your notes:</h3>
+            <ul id="note-list" class="note-list"></ul>
+        </div>
+        <div id="category-container">
+            <div class="category-management">
+                <h3>Categories</h3>
+                <div class="category-controls">
+                    <select id="category" class="category" title="Select category"></select>
+                    <button id="manage-categories" class="manage-btn">Manage Categories</button>
+                </div>
+            </div>
+            <button id="btn">Note!</button>
+        </div>
+
+        <!-- Category Management Modal -->
+        <div id="category-modal" class="modal">
+            <div class="modal-content">
+                <h3>Manage Categories</h3>
+                <div class="category-input">
+                    <input type="text" id="new-category" placeholder="New category name">
+                    <button id="add-category">Add</button>
+                </div>
+                <ul id="category-list" class="category-list"></ul>
+                <button id="close-modal" class="close-btn">Close</button>
+            </div>
+        </div>
+        
+        <button class="back-btn" onclick="location.href='../Index.html'">Back to Home</button>
+    </main>
 </body>
 </html>
