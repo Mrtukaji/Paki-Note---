@@ -22,14 +22,16 @@ nav {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
     margin: 0;
     padding: 0;
 }
@@ -41,32 +43,48 @@ nav {
 .nav-links a {
     color: white;
     text-decoration: none;
-    padding: 10px;
+    padding: 10px 15px;
     display: block;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    font-size: 1.1em;
+    border-radius: 4px;
 }
 
 .nav-links a:hover {
     color: #80cbc4;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
 }
 
 .dropdown-menu {
     display: none;
     position: absolute;
     background: rgba(68, 68, 68, 0.95);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     list-style: none;
     top: 100%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 150px;
-    padding: 0;
-    border-radius: 0 0 4px 4px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 8px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease;
 }
 
 .dropdown-menu li {
-    padding: 10px;
+    padding: 0;
+}
+
+.dropdown-menu a {
+    padding: 10px 20px;
+    display: block;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(5px);
 }
 
 .dropdown:hover .dropdown-menu {

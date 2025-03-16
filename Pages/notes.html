@@ -5,7 +5,6 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Paki-Note! - Notes</title>
      <link rel="stylesheet" href="../Assets/notes.css">
-     <script src="../Script/notes2.js"></script>
 </head>
 <body>
     <nav>
@@ -29,11 +28,25 @@
     <main class="notes-content">
         <h1>Paki-Note!</h1>
         <div id="inpt-container">
+            <div class="formatting-controls">
+                <select id="font-size" class="format-control" title="Select font size">
+                    <option value="16">16px</option>
+                    <option value="18">18px</option>
+                    <option value="20">20px</option>
+                    <option value="24">24px</option>
+                    <option value="28">28px</option>
+                </select>
+                <div class="format-buttons">
+                    <button id="bold-btn" class="format-btn" title="Bold">B</button>
+                    <button id="italic-btn" class="format-btn" title="Italic">I</button>
+                    <button id="underline-btn" class="format-btn" title="Underline">U</button>
+                </div>
+                <div class="text-color">
+                    <input type="color" id="text-color" class="color-picker" value="#000000" title="Choose text color">
+                    <label for="text-color">Text Color</label>
+                </div>
+            </div>
             <textarea type="text" id="inpt" class="inpt" placeholder="Type here..."></textarea>
-        </div>
-        <div id="note-container">
-            <h3>Your notes:</h3>
-            <ul id="note-list" class="note-list"></ul>
         </div>
         <div id="category-container">
             <div class="category-management">
@@ -43,22 +56,30 @@
                     <button id="manage-categories" class="manage-btn">Manage Categories</button>
                 </div>
             </div>
-            <button id="btn">Note!</button>
+            <button id="btn" class="add-note-btn">Add Note</button>
         </div>
 
+        <div id="note-container">
+            <h3>Your notes:</h3>
+            <ul id="note-list" class="note-list"></ul>
+        </div>
+
+        <!-- Category Management Modal -->
         <div id="category-modal" class="modal">
             <div class="modal-content">
+                <span class="modal-close">&times;</span>
                 <h3>Manage Categories</h3>
                 <div class="category-input">
                     <input type="text" id="new-category" placeholder="New category name">
-                    <button id="add-category">Add</button>
+                    <button id="add-category" class="add-category-btn">Add Category</button>
                 </div>
                 <ul id="category-list" class="category-list"></ul>
-                <button id="close-modal" class="close-btn">Close</button>
             </div>
         </div>
         
         <button class="back-btn" onclick="location.href='../Index.html'">Back to Home</button>
     </main>
+
+    <script src="../Script/notes2.js"></script>
 </body>
 </html>
