@@ -19,8 +19,6 @@ nav {
     right: 0;
     z-index: 1000;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,7 +82,6 @@ nav {
 
 .dropdown-menu a:hover {
     background: rgba(255, 255, 255, 0.15);
-    transform: translateX(5px);
 }
 
 .dropdown:hover .dropdown-menu {
@@ -97,12 +94,63 @@ nav {
 }
 
 #welcome .button-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1000px;
     margin: 30px auto;
     padding: 0 20px;
+}
+
+#welcome .button-container button {
+    flex: 0 1 280px;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 30px;
+    font-size: 1.4em;
+}
+
+/* Main features buttons (Notes, Calendar, Quiz, GPA) */
+#welcome .button-container button:nth-child(-n+4) {
+    flex: 0 1 400px;
+}
+
+/* Map button specific styling */
+#welcome .button-container .Map_btn {
+    flex: 0 1 300px;
+    background: linear-gradient(145deg, #4db6ac, #26a69a);
+    order: 5;
+    margin-top: 15px;
+}
+
+#welcome .button-container .Map_btn:hover {
+    background: linear-gradient(145deg, #80cbc4, #4db6ac);
+}
+
+@media (max-width: 900px) {
+    #welcome .button-container {
+        gap: 20px;
+    }
+    
+    #welcome .button-container button,
+    #welcome .button-container button:nth-child(-n+4) {
+        flex: 1 1 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    #welcome .button-container {
+        flex-direction: column;
+        max-width: 320px;
+    }
+    
+    #welcome .button-container button {
+        width: 100%;
+    }
 }
 
 h1 {
@@ -134,6 +182,7 @@ button {
     position: relative;
     overflow: hidden;
     border: 2px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
 }
 
 button:hover {
@@ -170,6 +219,16 @@ button:active {
     background: linear-gradient(145deg, #40dcef, #00bcd4);
 }
 
+.Map_btn {
+    background: linear-gradient(145deg, #4db6ac, #26a69a);
+    position: relative;
+    overflow: hidden;
+}
+
+.Map_btn:hover {
+    background: linear-gradient(145deg, #80cbc4, #4db6ac);
+}
+
 .contact {
     text-align: center;
     padding: 40px;
@@ -201,8 +260,7 @@ button:active {
     margin-bottom: 5px;
 }
 
-.inpt-group input,
-.inpt-group textarea {
+.inpt-group input, .inpt-group textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
@@ -235,5 +293,12 @@ button:active {
 
 .socials a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .button-container {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
 }
   

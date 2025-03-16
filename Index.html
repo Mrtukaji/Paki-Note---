@@ -6,25 +6,27 @@
     <title>Paki-Note!</title>
     <link rel="stylesheet" href="./Assets/styles.css">
     <link rel="stylesheet" href="./Assets/styles2.css">
+<!-- THE MAIN MENU/ MAIN PAGE -->
 </head>
 <body>
-    <nav>
+    <nav> <!-- THE NAVIGATION BAR -->
         <ul class="nav-links">
           <li><a href="#welcome">Home</a></li>
           <li class="dropdown">
-            <a href="#">Features ▼</a>
+            <a href="#">Features ▼</a> <!-- THE FEATURES DROPDOWN MENU -->
             <ul class="dropdown-menu">
               <li><a href="./Pages/notes.html">Notes</a></li>
               <li><a href="./Pages/calendar.html">Calendar</a></li>
               <li><a href="./Pages/quiz.html">Quiz</a></li>
               <li><a href="./Pages/gpa.html">Gpa Calculator</a></li>
+              <li><a href="./Pages/Map.html">Map</a></li>
             </ul>
           </li>
           <li><a href="#contact">Contacts</a></li>
           <li><a href="#faq">FAQs</a></li>
           <li><a href="#about">About</a></li>
           <li class="dropdown">
-            <a href="#">Settings ▼</a>
+            <a href="#">Settings ▼</a> <!-- THE SETTINGS -->
             <ul class="dropdown-menu">
               <li><a href="#" id="toggleTheme">Theme</a></li>
               <li><a href="#" id="clearData">Profile</a></li>
@@ -34,15 +36,16 @@
       </nav>
           
     <div id="welcome">
-        <h1>Paki-Note!</h1>
+        <h1>Paki-Note!</h1> 
         <p>Your personal study companion!</p>
-        <div class="button-container">
+        <div class="button-container"> <!-- The buttons para sa features -->
             <button onclick="location.href='./Pages/notes.html'">
                 <span>Take Notes!</span>
             </button>        
             <button onclick="location.href='./Pages/calendar.html'" class="calendar_btn">Manage Calendar!</button>
             <button onclick="location.href='./Pages/quiz.html'" class="quiz_btn">Take Quiz!</button>
             <button onclick="location.href='./Pages/gpa.html'" class="gpa_btn">Check GPA!</button>
+            <button onclick="location.href='./Pages/Map.html'" class="Map_btn">Check Map!</button>
         </div>
     </div>
     <p class="bltext">With this Site, we can help YOU <br><b>Organize Schedules,
@@ -50,7 +53,7 @@
     </p>
 
     <section class="about" id="about">
-        <div class="about-container">
+        <div class="about-container"> <!-- About Section -->
           <h1>About Paki-Note!</h1>
         <p>Paki Note! is a simple yet powerful tool designed for college students to
             <b>Organize schedules, Take notes more effectively, and Generate quizzes based on your notes</b> effortlessly.
@@ -62,6 +65,7 @@
             <li>Schedule & Reminders - Manage your tasks with a calendar.</li>
             <li>Auto-Generated Quizzes - Turn notes into interactive quizzes.</li>
             <li>GPA Calculator - Calculate your GPA with ease.</li>
+            <li>Map - Check the map of you college!.</li>
           </ul>
       
           <h2> Why Use Paki-Note?</h2>
@@ -76,10 +80,10 @@
       </section>
 
       <section class="faq" id="faq">
-        <div class="faq-container">
+        <div class="faq-container"> <!-- FAQ Section -->
           <h2>Frequently Asked Questions</h2>
       
-          <div class="faq-item">
+          <div class="faq-item"> 
             <button class="faq-question">How does Paki-Note! work?</button>
             <div class="faq-answer">
               <p>Paki-Note! lets you create Categorized notes, fixs your messy schedule, 
@@ -87,7 +91,7 @@
             </div>
           </div>
       
-          <div class="faq-item">
+          <div class="faq-item">                                      
             <button class="faq-question">Do I need to create an account?</button>
             <div class="faq-answer">
               <p>Nope! as of now Paki Note! only uses local browser storage, so currently no login is required.</p>
@@ -118,7 +122,7 @@
         </div>
       </section>
 
-    <section class="contact" id="contact">
+    <section class="contact" id="contact"> <!-- Contact Section -->
         <h2>Get in Touch with us!</h2>
         <p>Have questions or feedback? Let us know!</p>
       
@@ -143,8 +147,8 @@
       
         <div class="socials">
           <p>Or reach out to us via:</p>
-          <a href="#">📧 Email: contact@pakinote.com</a>
-          <a href="#">📘 Facebook</a>
+          <a href="#">📧 Email: contact@pakinote.com</a> <!-- Input what you want to put here -->
+          <a href="#">📘 Facebook</a> <!-- Input what you want to put here -->
         </div>
       </section>
 
