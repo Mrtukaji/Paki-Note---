@@ -1,11 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paki-Note! - GPA Calculator</title>
+    <link rel="stylesheet" href="../Assets/gpa.css">
 </head>
 <body>
-     
+    <nav>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Features ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="notes.html">Notes</a></li>
+                    <li><a href="calendar.html">Calendar</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="gpa.html">GPA Calculator</a></li>
+                </ul>
+            </li>
+            <li><a href="../index.html#contact">Contacts</a></li>
+            <li><a href="../index.html#faq">FAQs</a></li>
+            <li><a href="../index.html#about">About</a></li>
+        </ul>
+    </nav>
+
+    <main class="gpa-content">
+        <h1>GPA Calculator</h1>
+        
+        <div class="gpa-calculator">
+            <div class="semester-container">
+                <h2>Calculate Your GPA</h2>
+                <div class="course-list" id="courseList">
+                    <div class="course-entry">
+                        <input type="text" class="course-name" placeholder="Course Name">
+                        <select class="course-units" title="Course Units">
+                            <option value="">Units</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <select class="course-grade" title="Course Grade">
+                            <option value="">Grade</option>
+                            <option value="1.0">1.0 (97-100) Excellent</option>
+                            <option value="1.25">1.25 (94-96) Superior</option>
+                            <option value="1.5">1.5 (91-93) Very Good</option>
+                            <option value="1.75">1.75 (88-90) Good</option>
+                            <option value="2.0">2.0 (85-87) Above Average</option>
+                            <option value="2.25">2.25 (82-84) Average</option>
+                            <option value="2.5">2.5 (79-81) Fair</option>
+                            <option value="2.75">2.75 (76-78) Pass</option>
+                            <option value="3.0">3.0 (75) Passing</option>
+                            <option value="5.0">5.0 (Below 75) Failed</option>
+                            <option value="INC">INC (Incomplete)</option>
+                            <option value="DRP">DRP (Dropped)</option>
+                        </select>
+                        <button class="remove-course">×</button>
+                    </div>
+                </div>
+                
+                <div class="calculator-controls">
+                    <button id="addCourse" class="add-course-btn">Add Course</button>
+                    <button id="calculateGPA" class="calculate-btn">Calculate GPA</button>
+                </div>
+            </div>
+
+            <div class="gpa-result">
+                <h3>Your GPA</h3>
+                <div class="result-display">
+                    <span id="gpaResult">0.00</span>
+                </div>
+                <div class="gpa-scale">
+                    <div class="scale-item excellent">
+                        <span class="scale-label">Excellent</span>
+                        <span class="scale-range">1.0 - 1.5</span>
+                    </div>
+                    <div class="scale-item good">
+                        <span class="scale-label">Good</span>
+                        <span class="scale-range">1.51 - 2.0</span>
+                    </div>
+                    <div class="scale-item average">
+                        <span class="scale-label">Average</span>
+                        <span class="scale-range">2.01 - 2.5</span>
+                    </div>
+                    <div class="scale-item passing">
+                        <span class="scale-label">Passing</span>
+                        <span class="scale-range">2.51 - 3.0</span>
+                    </div>
+                    <div class="scale-item poor">
+                        <span class="scale-label">Failed</span>
+                        <span class="scale-range">5.0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../Script/gpa.js"></script>
 </body>
 </html>
