@@ -3,15 +3,16 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #e0f7fa;
+    font-family: 'Comfortaa', cursive;
+    background: linear-gradient(135deg, #e0f7fa 0%, #e8f5e9 50%, #f3e5f5 100%);
     color: #333;
     margin: 0;
     padding-top: 60px;
+    line-height: 1.6;
 }
 
 nav {
-    background: rgba(0, 77, 64, 0.95);
+    background: linear-gradient(90deg, rgba(103, 58, 183, 0.95), rgba(0, 77, 64, 0.95));
     padding: 15px 20px;
     position: fixed;
     top: 0;
@@ -39,6 +40,7 @@ nav {
 }
 
 .nav-links a {
+    font-family: 'Outfit', sans-serif;
     color: white;
     text-decoration: none;
     padding: 10px 15px;
@@ -46,6 +48,8 @@ nav {
     transition: all 0.3s ease;
     font-size: 1.1em;
     border-radius: 4px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
 }
 
 .nav-links a:hover {
@@ -57,7 +61,9 @@ nav {
 .dropdown-menu {
     display: none;
     position: absolute;
-    background: rgba(68, 68, 68, 0.95);
+    background: linear-gradient(135deg, rgba(103, 58, 183, 0.95), rgba(0, 77, 64, 0.95));
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     list-style: none;
     top: 100%;
     left: 50%;
@@ -81,7 +87,7 @@ nav {
 }
 
 .dropdown-menu a:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
 }
 
 .dropdown:hover .dropdown-menu {
@@ -122,13 +128,13 @@ nav {
 /* Map button specific styling */
 #welcome .button-container .Map_btn {
     flex: 0 1 300px;
-    background: linear-gradient(145deg, #4db6ac, #26a69a);
+    background: linear-gradient(145deg, #ff7043, #f4511e);
     order: 5;
     margin-top: 15px;
 }
 
 #welcome .button-container .Map_btn:hover {
-    background: linear-gradient(145deg, #80cbc4, #4db6ac);
+    background: linear-gradient(145deg, #ff8a65, #ff7043);
 }
 
 @media (max-width: 900px) {
@@ -154,28 +160,54 @@ nav {
 }
 
 h1 {
+    font-family: 'Righteous', cursive;
+    background: linear-gradient(45deg, #673ab7, #26c6da, #ff7043);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 4.5em;
+    margin-bottom: 0.3em;
+    text-shadow: 2px 2px 0px rgba(103, 58, 183, 0.1);
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-family: 'Righteous', cursive;
+    color: #673ab7;
+    font-size: 2.2em;
+    margin-bottom: 0.8em;
+    letter-spacing: 0.5px;
+}
+
+h3 {
+    font-family: 'Righteous', cursive;
+    font-size: 1.8em;
     color: #00796b;
-    font-size: 4em;
 }
 
 p {
     font-size: 1.2em;
     margin: 20px 0;
+    line-height: 1.8;
 }
 
 .bltext {
     text-align: center;
     margin: 50px 0;
+    font-size: 1.4em;
+    font-weight: 500;
+    line-height: 2;
 }
 
 button {
+    font-family: 'Outfit', sans-serif;
     padding: 25px 40px;
-    background: linear-gradient(145deg, #009688, #00796b);
+    background: linear-gradient(145deg, #7e57c2, #673ab7);
     color: white;
     border: none;
     border-radius: 15px;
     cursor: pointer;
-    font-size: 1.5em;
+    font-size: 1.4em;
     margin: 0;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -183,12 +215,32 @@ button {
     overflow: hidden;
     border: 2px solid rgba(255, 255, 255, 0.1);
     width: 100%;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
-button:hover {
-    background: linear-gradient(145deg, #00bfa5, #00897b);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+button span {
+    position: relative;
+    z-index: 1;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+button:hover::before {
+    left: 100%;
 }
 
 button:active {
@@ -196,56 +248,60 @@ button:active {
 }
 
 .calendar_btn {
-    background: linear-gradient(145deg, #26a69a, #00897b);
+    background: linear-gradient(145deg, #ff7043, #f4511e);
 }
 
 .calendar_btn:hover {
-    background: linear-gradient(145deg, #2ed3c2, #00a18c);
+    background: linear-gradient(145deg, #ff8a65, #ff7043);
 }
 
 .quiz_btn {
-    background: linear-gradient(145deg, #00acc1, #0097a7);
-}
-
-.quiz_btn:hover {
-    background: linear-gradient(145deg, #00e5ff, #00b8d4);
-}
-
-.gpa_btn {
     background: linear-gradient(145deg, #26c6da, #00acc1);
 }
 
+.quiz_btn:hover {
+    background: linear-gradient(145deg, #4dd0e1, #26c6da);
+}
+
+.gpa_btn {
+    background: linear-gradient(145deg, #7e57c2, #673ab7);
+}
+
 .gpa_btn:hover {
-    background: linear-gradient(145deg, #40dcef, #00bcd4);
+    background: linear-gradient(145deg, #9575cd, #7e57c2);
 }
 
 .Map_btn {
-    background: linear-gradient(145deg, #4db6ac, #26a69a);
+    background: linear-gradient(145deg, #ff7043, #f4511e);
     position: relative;
     overflow: hidden;
 }
 
 .Map_btn:hover {
-    background: linear-gradient(145deg, #80cbc4, #4db6ac);
+    background: linear-gradient(145deg, #ff8a65, #ff7043);
 }
 
 .contact {
     text-align: center;
     padding: 40px;
-    background: #caebf0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(243, 229, 245, 0.9));
     border-radius: 20px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(103, 58, 183, 0.1);
     margin: 50px auto;
     max-width: 600px;
+    border: 1px solid rgba(103, 58, 183, 0.2);
+    animation: borderAnimation 10s infinite;
 }
 
 .contact h2 {
-    font-size: 24px;
-    color: #333;
+    font-family: 'Righteous', cursive;
+    font-size: 2.4em;
+    color: #00796b;
+    margin-bottom: 0.8em;
 }
 
 .contact p {
-    font-size: 16px;
+    font-size: 1.1em;
     color: #555;
 }
 
@@ -255,50 +311,342 @@ button:active {
 }
 
 .inpt-group label {
+    font-family: 'Outfit', sans-serif;
     display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #673ab7;
+    font-size: 1.1em;
 }
 
-.inpt-group input, .inpt-group textarea {
+.inpt-group input,
+.inpt-group textarea {
+    font-family: 'Comfortaa', cursive;
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 12px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.9);
+    background-image: linear-gradient(white, white), 
+                      linear-gradient(90deg, #673ab7, #26c6da, #ff7043);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+.inpt-group input:focus,
+.inpt-group textarea:focus {
+    outline: none;
+    border-color: #673ab7;
+    box-shadow: 0 0 0 3px rgba(103, 58, 183, 0.1);
+    background-color: white;
 }
 
 .sndbtn {
-    background: #00796b;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background: linear-gradient(145deg, #7e57c2, #673ab7);
+    border-radius: 12px;
+    transition: all 0.3s ease;
 }
 
 .sndbtn:hover {
-    background: #01584e;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 121, 107, 0.2);
 }
 
 .socials {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .socials a {
-    display: block;
-    color: #007bff;
+    font-family: 'Outfit', sans-serif;
+    display: inline-block;
+    color: #673ab7;
     text-decoration: none;
-    margin-top: 5px;
+    margin: 10px 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 8px 15px;
+    border-radius: 8px;
+    background: rgba(103, 58, 183, 0.1);
 }
 
 .socials a:hover {
-    text-decoration: underline;
+    background: rgba(103, 58, 183, 0.2);
+    transform: translateY(-2px);
+    text-decoration: none;
 }
 
 @media (max-width: 768px) {
-    .button-container {
-        grid-template-columns: 1fr;
-        max-width: 400px;
+    body {
+        padding-top: 50px;
     }
+
+    nav {
+        padding: 10px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 1em;
+        padding: 8px 12px;
+    }
+
+    .dropdown-menu {
+        width: 200px;
+        left: auto;
+        right: 0;
+        transform: none;
+    }
+
+    h1 {
+        font-size: 3em;
+        margin-bottom: 0.5em;
+    }
+
+    .bltext {
+        font-size: 1.1em;
+        padding: 0 20px;
+        line-height: 1.6;
+    }
+
+    #welcome {
+        margin-top: 80px;
+    }
+
+    #welcome .button-container {
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    #welcome .button-container button {
+        flex: 1 1 100%;
+        min-height: 80px;
+        font-size: 1.2em;
+        padding: 15px 20px;
+    }
+
+    .contact {
+        margin: 30px 15px;
+        padding: 30px 20px;
+        border-radius: 15px;
+    }
+
+    .contact h2 {
+        font-size: 1.8em;
+    }
+
+    .inpt-group {
+        margin-bottom: 20px;
+    }
+
+    .inpt-group label {
+        font-size: 1em;
+    }
+
+    .inpt-group input,
+    .inpt-group textarea {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .sndbtn {
+        width: 100%;
+        padding: 12px 20px;
+    }
+
+    .socials a {
+        display: block;
+        margin: 10px auto;
+        max-width: 250px;
+    }
+
+    .faq-container {
+        padding: 0 15px;
+    }
+
+    .faq-question {
+        font-size: 1em;
+        padding: 12px 15px;
+        text-align: left;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        padding: 6px 10px;
+        font-size: 0.9em;
+    }
+
+    #welcome .button-container button {
+        min-height: 60px;
+        font-size: 1.1em;
+        padding: 12px 15px;
+    }
+
+    .about-container {
+        padding: 0 15px;
+    }
+
+    .about h2 {
+        font-size: 1.6em;
+    }
+
+    .about ul {
+        padding-left: 20px;
+    }
+
+    .about ul li {
+        font-size: 0.9em;
+        margin-bottom: 10px;
+    }
+}
+
+/* Tablet optimization */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #welcome .button-container {
+        max-width: 800px;
+    }
+
+    #welcome .button-container button {
+        flex: 0 1 calc(50% - 20px);
+    }
+
+    .contact {
+        max-width: 80%;
+    }
+}
+
+/* Navigation menu for mobile */
+@media (max-width: 768px) {
+    nav {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .nav-links {
+        width: max-content;
+        padding: 0 15px;
+    }
+
+    .dropdown-menu {
+        position: fixed;
+        top: auto;
+        left: 0;
+        right: 0;
+        width: 100%;
+        margin-top: 5px;
+        border-radius: 0;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        max-height: 60vh;
+        overflow-y: auto;
+    }
+}
+
+/* Improve touch targets on mobile */
+@media (hover: none) {
+    button,
+    .nav-links a,
+    .socials a {
+        cursor: default;
+    }
+
+    button:active,
+    .nav-links a:active,
+    .socials a:active {
+        transform: scale(0.98);
+    }
+
+    .dropdown-menu {
+        padding: 10px 0;
+    }
+
+    .dropdown-menu a {
+        padding: 15px 20px;
+    }
+}
+
+/* Fix button hover effects on mobile */
+@media (hover: none) {
+    button::before {
+        display: none;
+    }
+
+    button:active {
+        opacity: 0.9;
+    }
+}
+
+/* Maintain aspect ratio for buttons on different screens */
+.button-container button {
+    aspect-ratio: 16/9;
+    max-height: 150px;
+}
+
+/* Add smooth transitions for layout changes */
+* {
+    transition: all 0.3s ease;
+}
+
+/* Optimize images and backgrounds for mobile */
+@media (max-width: 768px) {
+    body {
+        background: linear-gradient(135deg, #e0f7fa 0%, #e8f5e9 100%);
+    }
+}
+
+/* Improve form usability on mobile */
+@media (max-width: 768px) {
+    input, textarea, select, button {
+        font-size: 16px !important; /* Prevent zoom on iOS */
+    }
+
+    textarea {
+        min-height: 100px;
+    }
+}
+
+/* Add rainbow border animation for contact form */
+@keyframes borderAnimation {
+    0% { border-color: #673ab7; }
+    33% { border-color: #26c6da; }
+    66% { border-color: #ff7043; }
+    100% { border-color: #673ab7; }
+}
+
+.contact {
+    animation: borderAnimation 10s infinite;
+}
+
+/* FAQ section styling update */
+.faq-question {
+    background: linear-gradient(145deg, #7e57c2, #673ab7);
+    color: white;
+}
+
+.faq-question:hover {
+    background: linear-gradient(145deg, #9575cd, #7e57c2);
+}
+
+.faq-answer {
+    background: rgba(255, 255, 255, 0.9);
+    border-left: 4px solid #ff7043;
 }
   
