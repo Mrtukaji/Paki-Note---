@@ -3,23 +3,26 @@ html {
 }
 
 body {
-    font-family: 'Comfortaa', cursive;
-    background: linear-gradient(135deg, #e0f7fa 0%, #e8f5e9 50%, #f3e5f5 100%);
-    color: #333;
     margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+    background-color: #f4f7e8;
+    color: #333;
     padding-top: 60px;
     line-height: 1.6;
 }
 
 nav {
-    background: linear-gradient(90deg, rgba(103, 58, 183, 0.95), rgba(0, 77, 64, 0.95));
+    background: rgba(46, 125, 50, 0.95);
     padding: 15px 20px;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,7 +43,6 @@ nav {
 }
 
 .nav-links a {
-    font-family: 'Outfit', sans-serif;
     color: white;
     text-decoration: none;
     padding: 10px 15px;
@@ -53,7 +55,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #80cbc4;
+    color: #FFD700;
     background: rgba(255, 255, 255, 0.1);
     transform: translateY(-2px);
 }
@@ -61,7 +63,7 @@ nav {
 .dropdown-menu {
     display: none;
     position: absolute;
-    background: linear-gradient(135deg, rgba(103, 58, 183, 0.95), rgba(0, 77, 64, 0.95));
+    background: rgba(46, 125, 50, 0.95);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     list-style: none;
@@ -173,7 +175,7 @@ h1 {
 
 h2 {
     font-family: 'Righteous', cursive;
-    color: #673ab7;
+    color: #2E7D32;
     font-size: 2.2em;
     margin-bottom: 0.8em;
     letter-spacing: 0.5px;
@@ -200,16 +202,16 @@ p {
 }
 
 button {
-    font-family: 'Outfit', sans-serif;
-    padding: 25px 40px;
-    background: linear-gradient(145deg, #7e57c2, #673ab7);
+    background: linear-gradient(145deg, #2E7D32, #1B5E20);
     color: white;
     border: none;
-    border-radius: 15px;
+    padding: 15px 30px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 1.4em;
-    margin: 0;
+    font-size: 1.1em;
     transition: all 0.3s ease;
+    font-family: 'Comfortaa', cursive;
+    margin: 0;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
@@ -219,28 +221,10 @@ button {
     letter-spacing: 0.5px;
 }
 
-button span {
-    position: relative;
-    z-index: 1;
-}
-
-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, 
-        transparent,
-        rgba(255, 255, 255, 0.3),
-        transparent
-    );
-    transition: 0.5s;
-}
-
-button:hover::before {
-    left: 100%;
+button:hover {
+    background: linear-gradient(145deg, #D4E157, #2E7D32);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 button:active {
@@ -284,12 +268,12 @@ button:active {
 .contact {
     text-align: center;
     padding: 40px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(243, 229, 245, 0.9));
+    background-color: #f4f7e8;
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(103, 58, 183, 0.1);
     margin: 50px auto;
     max-width: 600px;
-    border: 1px solid rgba(103, 58, 183, 0.2);
+    border: 1px solid #D4E157;
     animation: borderAnimation 10s infinite;
 }
 
@@ -324,7 +308,7 @@ button:active {
     font-family: 'Comfortaa', cursive;
     width: 100%;
     padding: 12px;
-    border: 2px solid transparent;
+    border: 2px solid #D4E157;
     border-radius: 12px;
     font-size: 1em;
     transition: all 0.3s ease;
@@ -338,25 +322,26 @@ button:active {
 .inpt-group input:focus,
 .inpt-group textarea:focus {
     outline: none;
-    border-color: #673ab7;
-    box-shadow: 0 0 0 3px rgba(103, 58, 183, 0.1);
+    border-color: #2E7D32;
+    box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.1);
     background-color: white;
 }
 
 .sndbtn {
+    background: linear-gradient(145deg, #2E7D32, #1B5E20);
     font-family: 'Outfit', sans-serif;
     font-weight: 600;
     letter-spacing: 0.5px;
     padding: 15px 30px;
     font-size: 1.2em;
-    background: linear-gradient(145deg, #7e57c2, #673ab7);
     border-radius: 12px;
     transition: all 0.3s ease;
 }
 
 .sndbtn:hover {
+    background: linear-gradient(145deg, #D4E157, #2E7D32);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 121, 107, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .socials {
@@ -637,16 +622,18 @@ button:active {
 
 /* FAQ section styling update */
 .faq-question {
-    background: linear-gradient(145deg, #7e57c2, #673ab7);
-    color: white;
+    background: #f4f7e8;
+    border: 1px solid #D4E157;
+    color: #2E7D32;
 }
 
 .faq-question:hover {
-    background: linear-gradient(145deg, #9575cd, #7e57c2);
+    background: linear-gradient(145deg, #D4E157, #2E7D32);
+    color: white;
 }
 
 .faq-answer {
     background: rgba(255, 255, 255, 0.9);
-    border-left: 4px solid #ff7043;
+    border: 1px solid #D4E157;
 }
   

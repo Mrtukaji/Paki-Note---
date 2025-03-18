@@ -1,6 +1,6 @@
 body {
     font-family: 'Outfit', sans-serif;
-    background-color: #f0f7f4;
+    background-color: #f4f7e8;
     color: #333;
     margin: 0;
     padding-top: 60px;
@@ -46,7 +46,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #a5d6a7;
+    color: #FFD700;
     background: rgba(255, 255, 255, 0.1);
     transform: translateY(-2px);
 }
@@ -96,7 +96,7 @@ nav {
 /* Button Styles */
 .add-note-btn, .manage-btn, .back-btn {
     padding: 12px 25px;
-    background: linear-gradient(145deg, #43a047, #2e7d32);
+    background: linear-gradient(145deg, #2E7D32, #1B5E20);
     color: white;
     border: none;
     border-radius: 8px;
@@ -114,7 +114,7 @@ nav {
 }
 
 .add-note-btn:hover, .manage-btn:hover, .back-btn:hover {
-    background: linear-gradient(145deg, #66bb6a, #43a047);
+    background: linear-gradient(145deg, #D4E157, #2E7D32);
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
@@ -153,15 +153,15 @@ nav {
     min-width: 200px;
     font-size: 1.1em;
     padding: 10px 15px;
-    border: 2px solid #c8e6c9;
+    border: 2px solid #D4E157;
     border-radius: 8px;
     background: white;
     transition: all 0.3s ease;
 }
 
 .category:focus {
-    border-color: #43a047;
-    box-shadow: 0 0 0 2px rgba(67, 160, 71, 0.1);
+    border-color: #2E7D32;
+    box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.1);
     outline: none;
 }
 
@@ -175,7 +175,7 @@ nav {
 }
 
 h1 {
-    color: #2e7d32;
+    color: #2E7D32;
     font-size: 2.5em;
     grid-column: 1 / -1;
     text-align: center;
@@ -188,7 +188,7 @@ h1 {
     height: 500px;
     font-size: 16px;
     padding: 15px;
-    border: 1px solid #c8e6c9;
+    border: 1px solid #D4E157;
     border-radius: 8px;
     background: white;
     line-height: 1.6;
@@ -212,7 +212,7 @@ h1 {
 }
 
 h3 {
-    color: #2e7d32;
+    color: #2E7D32;
     font-size: 1.5em;
     margin-bottom: 15px;
     font-family: 'Comfortaa', cursive;
@@ -231,7 +231,7 @@ h3 {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    border: 1px solid #c8e6c9;
+    border: 1px solid #D4E157;
     margin-bottom: 5px;
     border-radius: 4px;
     background: #f5f5f5;
@@ -259,7 +259,7 @@ h3 {
     background: white;
     border-radius: 8px;
     min-height: 400px;
-    border: 1px solid #c8e6c9;
+    border: 1px solid #D4E157;
     padding: 20px;
     overflow-y: auto;
     max-height: calc(100vh - 400px);
@@ -267,7 +267,7 @@ h3 {
 
 .note-item {
     background: white;
-    border: 1px solid #b2dfdb;
+    border: 1px solid #D4E157;
     border-radius: 4px;
     padding: 20px;
     margin-bottom: 15px;
@@ -286,8 +286,8 @@ h3 {
 }
 
 .category-badge {
-    background: #00796b;
-    color: white;
+    background: #2E7D32;
+    color: #FFD700;
     padding: 4px 8px;
     border-radius: 4px;
     font-size: 0.8em;
@@ -384,7 +384,7 @@ h3 {
 /* Text Formatting Controls */
 .formatting-controls {
     background: white;
-    border: 1px solid #b2dfdb;
+    border: 1px solid #D4E157;
     border-bottom: none;
     border-radius: 8px 8px 0 0;
     padding: 10px;
@@ -395,7 +395,7 @@ h3 {
 
 .format-control {
     padding: 6px;
-    border: 1px solid #b2dfdb;
+    border: 1px solid #D4E157;
     border-radius: 4px;
     font-size: 1em;
     background: white;
@@ -410,7 +410,7 @@ h3 {
 .format-btn {
     width: 30px;
     height: 30px;
-    border: 1px solid #b2dfdb;
+    border: 1px solid #D4E157;
     border-radius: 4px;
     background: white;
     cursor: pointer;
@@ -419,12 +419,12 @@ h3 {
 }
 
 .format-btn:hover {
-    background: #e0f7fa;
+    background: #f4f7e8;
 }
 
 .format-btn.active {
-    background: #b2dfdb;
-    color: #00796b;
+    background: #D4E157;
+    color: #2E7D32;
 }
 
 .text-color {
@@ -447,7 +447,7 @@ h3 {
 }
 
 .color-picker::-webkit-color-swatch {
-    border: 1px solid #b2dfdb;
+    border: 1px solid #D4E157;
     border-radius: 4px;
 }
 
@@ -519,21 +519,21 @@ h3 {
 .category-input input {
     flex: 1;
     padding: 10px 15px;
-    border: 2px solid #b2dfdb;
+    border: 2px solid #D4E157;
     border-radius: 8px;
     font-size: 1.1em;
     transition: all 0.3s ease;
 }
 
 .category-input input:focus {
-    border-color: #009688;
-    box-shadow: 0 0 0 2px rgba(0, 150, 136, 0.1);
+    border-color: #2E7D32;
+    box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.1);
     outline: none;
 }
 
 .add-category-btn {
     padding: 10px 20px;
-    background: linear-gradient(145deg, #009688, #00796b);
+    background: linear-gradient(145deg, #2E7D32, #1B5E20);
     color: white;
     border: none;
     border-radius: 8px;
@@ -544,7 +544,7 @@ h3 {
 }
 
 .add-category-btn:hover {
-    background: linear-gradient(145deg, #00bfa5, #00897b);
+    background: linear-gradient(145deg, #D4E157, #2E7D32);
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
@@ -574,7 +574,7 @@ h3 {
 }
 
 .category-item:hover {
-    background: #e0f2f1;
+    background: #f4f7e8;
     transform: translateX(5px);
 }
 
@@ -598,7 +598,7 @@ h3 {
     background: white;
     border-radius: 8px;
     padding: 20px;
-    border: 1px solid #c8e6c9;
+    border: 1px solid #D4E157;
     margin-bottom: 20px;
 }
 
@@ -609,7 +609,7 @@ h3 {
 }
 
 .stat-item {
-    background: #f8f9fa;
+    background: #f4f7e8;
     padding: 15px;
     border-radius: 8px;
     text-align: center;
@@ -617,7 +617,7 @@ h3 {
 
 .stat-value {
     font-size: 1.5em;
-    color: #2e7d32;
+    color: #2E7D32;
     font-weight: bold;
 }
 
@@ -631,7 +631,7 @@ h3 {
     background: white;
     border-radius: 8px;
     padding: 20px;
-    border: 1px solid #c8e6c9;
+    border: 1px solid #D4E157;
 }
 
 .activity-item {
@@ -639,7 +639,7 @@ h3 {
     align-items: center;
     gap: 10px;
     padding: 10px 0;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #D4E157;
 }
 
 .activity-item:last-child {
@@ -649,7 +649,7 @@ h3 {
 .activity-icon {
     width: 24px;
     height: 24px;
-    color: #2e7d32;
+    color: #2E7D32;
 }
 
 .activity-text {

@@ -1,31 +1,33 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #e3f2fd;
+    font-family: 'Outfit', sans-serif;
+    background-color: #f4f7e8;
     color: #333;
     margin: 0;
-    padding-top: 60px;
+    padding-top: 80px;
 }
 
 nav {
-    background: rgba(0, 77, 64, 0.95);
+    background: rgba(46, 125, 50, 0.95);
     padding: 15px 20px;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
     margin: 0;
     padding: 0;
 }
@@ -37,57 +39,190 @@ nav {
 .nav-links a {
     color: white;
     text-decoration: none;
-    padding: 10px;
+    padding: 10px 15px;
     display: block;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    font-size: 1.1em;
+    border-radius: 4px;
 }
 
 .nav-links a:hover {
-    color: #80cbc4;
+    color: #FFD700;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
 }
 
 .dropdown-menu {
     display: none;
     position: absolute;
-    background: rgba(68, 68, 68, 0.95);
+    background: rgba(46, 125, 50, 0.95);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     list-style: none;
     top: 100%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 150px;
-    padding: 0;
-    border-radius: 0 0 4px 4px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 8px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-menu li {
-    padding: 10px;
+    padding: 0;
+}
+
+.dropdown-menu a {
+    padding: 10px 20px;
+    display: block;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
 }
 
 .dropdown:hover .dropdown-menu {
     display: block;
 }
 
-.quiz-content {
-    max-width: 800px;
-    margin: 20px auto;
+.quiz-container {
+    max-width: 600px;
+    margin: 130px auto 40px;
     padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #D4E157;
 }
 
-h1 {
-    color: #00796b;
-    font-size: 2.5em;
+h1, h2 {
+    font-family: 'Righteous', cursive;
+    background: linear-gradient(45deg, #673ab7, #26c6da, #ff7043);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 4.5em;
+    margin-bottom: 0.3em;
+    text-shadow: 2px 2px 0px rgba(103, 58, 183, 0.1);
+    letter-spacing: 1px;
+    padding-top: 10px;
     text-align: center;
-    margin-bottom: 30px;
+    width: 100%;
+}
+
+.quiz-type-selector {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.quiz-type-btn {
+    padding: 8px 16px;
+    background: linear-gradient(145deg, #2E7D32, #1B5E20);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1em;
+}
+
+.quiz-type-btn:hover,
+.quiz-type-btn.active {
+    background: linear-gradient(145deg, #D4E157, #2E7D32);
+    transform: translateY(-2px);
+}
+
+.question {
+    background: #f4f7e8;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #D4E157;
+}
+
+.question-text {
+    font-size: 1em;
+    margin-bottom: 12px;
+    color: #2E7D32;
+}
+
+.options {
+    display: grid;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.option {
+    padding: 12px;
+    background: white;
+    border: 1px solid #D4E157;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 8px;
+}
+
+.option:hover {
+    background: #f4f7e8;
+    border-color: #2E7D32;
+}
+
+.option.selected {
+    background: #2E7D32;
+    color: white;
+    border-color: #2E7D32;
+}
+
+.submit-btn {
+    background: linear-gradient(145deg, #2E7D32, #1B5E20);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(145deg, #D4E157, #2E7D32);
+    transform: translateY(-2px);
+}
+
+.result {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    background: #f4f7e8;
+    border: 1px solid #D4E157;
+}
+
+.correct {
+    color: #2E7D32;
+    font-weight: bold;
+}
+
+.incorrect {
+    color: #e57373;
+    font-weight: bold;
 }
 
 .quiz-setup {
     background: white;
-    padding: 30px;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    border: 1px solid #D4E157;
 }
 
 .quiz-options {
@@ -104,12 +239,13 @@ h1 {
 
 .option-group label {
     font-weight: bold;
-    color: #00796b;
+    color: #2E7D32;
 }
 
-.quiz-select, #questionCount {
+.quiz-select,
+#questionCount {
     padding: 10px;
-    border: 1px solid #b2dfdb;
+    border: 1px solid #D4E157;
     border-radius: 4px;
     font-size: 1em;
     background: white;
@@ -122,40 +258,26 @@ h1 {
 .primary-btn {
     width: 100%;
     padding: 12px;
-    background: linear-gradient(145deg, #009688, #00796b);
+    background: linear-gradient(145deg, #2E7D32, #1B5E20);
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 1.1em;
     transition: all 0.3s ease;
 }
 
 .primary-btn:hover {
-    background: linear-gradient(145deg, #00bfa5, #00897b);
+    background: linear-gradient(145deg, #D4E157, #2E7D32);
     transform: translateY(-2px);
 }
 
-.quiz-container {
-    background: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-    display: none;
-}
-
 .question-card {
-    background: #f5f5f5;
+    background: #f4f7e8;
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
-}
-
-.question-text {
-    font-size: 1.1em;
-    margin-bottom: 15px;
-    color: #00796b;
+    border: 1px solid #D4E157;
 }
 
 .options-container {
@@ -167,42 +289,35 @@ h1 {
 .option-btn {
     padding: 10px 15px;
     background: white;
-    border: 1px solid #b2dfdb;
-    border-radius: 4px;
+    border: 1px solid #D4E157;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
     text-align: left;
 }
 
 .option-btn:hover {
-    background: #e0f2f1;
+    background: #f4f7e8;
+    border-color: #2E7D32;
 }
 
 .option-btn.selected {
-    background: #b2dfdb;
-    border-color: #009688;
+    background: #2E7D32;
+    color: white;
+    border-color: #2E7D32;
 }
 
 .fill-blank-input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #b2dfdb;
+    border: 1px solid #D4E157;
     border-radius: 4px;
     font-size: 1em;
 }
 
-.quiz-results {
-    background: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    display: none;
-}
-
 .result-score {
     font-size: 2em;
-    color: #00796b;
+    color: #2E7D32;
     margin-bottom: 20px;
 }
 
@@ -217,26 +332,27 @@ h1 {
 }
 
 .correct-answer {
-    color: #4caf50;
+    color: #2E7D32;
 }
 
 .wrong-answer {
-    color: #f44336;
+    color: #e57373;
 }
 
 .retry-btn {
     padding: 12px 25px;
-    background: linear-gradient(145deg, #26a69a, #00897b);
+    background: linear-gradient(145deg, #2E7D32, #1B5E20);
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 1.1em;
     transition: all 0.3s ease;
     margin-top: 20px;
+    width: 100%;
 }
 
 .retry-btn:hover {
-    background: linear-gradient(145deg, #2ed3c2, #00a18c);
+    background: linear-gradient(145deg, #D4E157, #2E7D32);
     transform: translateY(-2px);
 }
