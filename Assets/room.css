@@ -1,14 +1,243 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Outfit', sans-serif;
+    background-color: #f4f7e8;
+    color: #333;
     margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
+    padding-top: 80px;
 }
 
-.container {
+.room-container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 130px auto 40px;
     padding: 20px;
+}
+
+h1 {
+    font-family: 'Righteous', cursive;
+    background: linear-gradient(45deg, #673ab7, #26c6da, #ff7043);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 4.5em;
+    margin-bottom: 0.3em;
+    text-shadow: 2px 2px 0px rgba(103, 58, 183, 0.1);
+    letter-spacing: 1px;
+    padding-top: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+h2 {
+    font-family: 'Righteous', cursive;
+    color: #2E7D32;
+    font-size: 2.2em;
+    margin-bottom: 0.8em;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.search-section {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    border: 1px solid #D4E157;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #D4E157;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: 'Outfit', sans-serif;
+}
+
+.search-btn {
+    background: linear-gradient(145deg, #2E7D32, #1B5E20);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+    background: linear-gradient(145deg, #D4E157, #2E7D32);
+    transform: translateY(-2px);
+}
+
+.filter-options {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filter-options select {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px;
+    border: 2px solid #D4E157;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: 'Outfit', sans-serif;
+    background: white;
+}
+
+.results-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.room-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #D4E157;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-5px);
+}
+
+.room-header {
+    background: linear-gradient(145deg, #2E7D32, #1B5E20);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.room-header h3 {
+    margin: 0;
+    font-size: 1.4em;
+    font-family: 'Righteous', cursive;
+}
+
+.room-type {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+.room-details {
+    padding: 20px;
+}
+
+.room-details p {
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+.room-details strong {
+    color: #2E7D32;
+}
+
+.room-actions {
+    padding: 15px 20px;
+    display: flex;
+    gap: 10px;
+    border-top: 1px solid #f4f7e8;
+}
+
+.directions-btn,
+.schedule-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
+
+.directions-btn {
+    background: linear-gradient(145deg, #2E7D32, #1B5E20);
+    color: white;
+}
+
+.schedule-btn {
+    background: linear-gradient(145deg, #26c6da, #00acc1);
+    color: white;
+}
+
+.directions-btn:hover,
+.schedule-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.map-section {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #D4E157;
+}
+
+.map-container {
+    width: 100%;
+    height: 400px;
+    background: #f4f7e8;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f7e8;
+    color: #666;
+    font-size: 1.2em;
+}
+
+@media (max-width: 768px) {
+    .room-container {
+        margin: 100px auto 20px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .filter-options {
+        flex-direction: column;
+    }
+
+    .filter-options select {
+        width: 100%;
+    }
+
+    .room-actions {
+        flex-direction: column;
+    }
+
+    .map-container {
+        height: 300px;
+    }
 }
 
 .room-list {
