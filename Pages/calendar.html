@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paki-Note! - Calendar</title>
     <link rel="stylesheet" href="../Assets/calendar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Righteous&family=Comfortaa:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <nav>
@@ -32,20 +34,71 @@
             </li>
         </ul>
     </nav>
-    <h1>Paki-Schedule!</h1> 
 
-    
-    <main>
-        <section id="calendar">
-            <h2>Calendar</h2>
-            <div class="event-input">
-                <input type="date" id="eventDate" title="Event Date">
-                <input type="text" id="eventDescription" placeholder="Event Description">
-                <button id="addEvent">Add Event</button>
+    <div class="calendar-container">
+        <div class="calendar-header">
+            <h1>Schedule Your Classes</h1>
+            <div class="calendar-controls">
+                <button id="prevMonth"><i class="fas fa-chevron-left"></i></button>
+                <h2 id="currentMonth">Month & Year</h2>
+                <button id="nextMonth"><i class="fas fa-chevron-right"></i></button>
             </div>
-            <div id="eventList"></div>
-        </section>
-    </main>
+        </div>
+
+        <div class="calendar-grid">
+            <div class="weekdays">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <div id="calendarDays" class="calendar-days">
+            </div>
+        </div>
+
+        <div class="event-section">
+            <div class="event-form">
+                <h3>Add New Event</h3>
+                <form id="eventForm">
+                    <div class="form-group">
+                        <label for="eventTitle">Event Title</label>
+                        <input type="text" id="eventTitle" required placeholder="Enter event title">
+                    </div>
+                    <div class="form-group">
+                        <label for="eventDate">Date</label>
+                        <input type="date" id="eventDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventTime">Time</label>
+                        <input type="time" id="eventTime" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventType">Type</label>
+                        <select id="eventType" required>
+                            <option value="class">Class</option>
+                            <option value="exam">Exam</option>
+                            <option value="assignment">Assignment</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventDescription">Description</label>
+                        <textarea id="eventDescription" placeholder="Enter event description"></textarea>
+                    </div>
+                    <button type="submit" class="add-event-btn">Add Event</button>
+                </form>
+            </div>
+
+            <div class="upcoming-events">
+                <h3>Upcoming Events</h3>
+                <div id="eventsList" class="events-list">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="../Script/calendar.js"></script>
 </body>
