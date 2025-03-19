@@ -11,17 +11,25 @@
 <body>
     <nav>
         <ul class="nav-links">
-            <li><a href="../Index.html">Home</a></li>
-            <li><a href="notes.html">Notes</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li class="dropdown">
-                <a href="#">Tools</a>
+                <a href="#">Features ▼</a>
                 <ul class="dropdown-menu">
+                    <li><a href="notes.html">Notes</a></li>
                     <li><a href="calendar.html">Calendar</a></li>
                     <li><a href="quiz.html">Quiz</a></li>
                     <li><a href="gpa.html">GPA Calculator</a></li>
-                    <li><a href="room.html">Room Finder</a></li>
                 </ul>
             </li>
+            <li><a href="../index.html#contact">Contacts</a></li>
+            <li><a href="../index.html#faq">FAQs</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li class="dropdown">
+                <a href="#">Settings ▼</a> <!-- THE SETTINGS -->
+                <ul class="dropdown-menu">
+                  <li><a href="#" id="toggleTheme">Options</a></li>
+                  <li><a href="./Pages(1)/profile.html" id="cleardata">Profile</a></li>
+                </ul>
         </ul>
     </nav>
 
@@ -34,14 +42,6 @@
                 <button class="search-btn">Search</button>
             </div>
             <div class="filter-options">
-                <select id="buildingFilter">
-                    <option value="">All Buildings</option>
-                    <option value="jenks">Jenks Library</option>
-                    <option value="barrington">Barrington Center</option>
-                    <option value="lane">Lane Student Center</option>
-                    <option value="phillips">Phillips Music Center</option>
-                    <option value="ken">Ken Olsen Science Center</option>
-                </select>
                 <select id="floorFilter">
                     <option value="">All Floors</option>
                     <option value="1">1st Floor</option>
