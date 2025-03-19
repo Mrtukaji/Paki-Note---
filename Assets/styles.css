@@ -636,4 +636,50 @@ button:active {
     background: rgba(255, 255, 255, 0.9);
     border: 1px solid #D4E157;
 }
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.login-btn, .signup-btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.login-btn {
+    color: #2E7D32;
+    border: 2px solid #2E7D32;
+}
+
+.login-btn:hover {
+    background: rgba(46, 125, 50, 0.1);
+}
+
+.signup-btn {
+    background: linear-gradient(145deg, #2E7D32, #1B5E20);
+    color: white;
+    border: none;
+}
+
+.signup-btn:hover {
+    background: linear-gradient(145deg, #D4E157, #2E7D32);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .auth-buttons {
+        margin: 10px 0;
+        justify-content: center;
+    }
+
+    .login-btn, .signup-btn {
+        padding: 10px 20px;
+        font-size: 1.1em;
+    }
+}
   

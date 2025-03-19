@@ -4,9 +4,238 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile - Paki-Note!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Righteous&family=Comfortaa:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Assets/styles.css">
+    <style>
+        .profile-container {
+            max-width: 800px;
+            margin: 120px auto 40px;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 2px solid #D4E157;
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .profile-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background: linear-gradient(145deg, #2E7D32, #1B5E20);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4em;
+            font-family: 'Righteous', cursive;
+            box-shadow: 0 5px 15px rgba(46, 125, 50, 0.2);
+        }
+
+        .profile-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: 700;
+            color: #2E7D32;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .profile-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .profile-section h2 {
+            color: #2E7D32;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .profile-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #2E7D32;
+            min-width: 120px;
+        }
+
+        .info-value {
+            color: #333;
+        }
+
+        .edit-profile-btn {
+            background: linear-gradient(145deg, #2E7D32, #1B5E20);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .edit-profile-btn:hover {
+            background: linear-gradient(145deg, #D4E157, #2E7D32);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .profile-container {
+                margin: 100px 20px 40px;
+                padding: 20px;
+            }
+
+            .profile-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-info {
+                grid-template-columns: 1fr;
+            }
+
+            .info-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+
+            .info-label {
+                min-width: auto;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Miss ko na sya</h1>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="../Index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Features ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="../Pages/notes.html">Notes</a></li>
+                    <li><a href="../Pages/calendar.html">Calendar</a></li>
+                    <li><a href="../Pages/quiz.html">Quiz</a></li>
+                    <li><a href="../Pages/gpa.html">GPA Calculator</a></li>
+                    <li><a href="../Pages/room.html">Rooms</a></li>
+                </ul>
+            </li>
+            <li><a href="../Index.html#contact">Contacts</a></li>
+            <li><a href="../Index.html#faq">FAQs</a></li>
+            <li><a href="../Index.html#about">About</a></li>
+            <li class="auth-buttons">
+                <a href="../Pages/login.html" class="login-btn">Login</a>
+                <a href="../Pages/signup.html" class="signup-btn">Sign Up</a>
+            </li>
+        </ul>
+    </nav>
 
+    <div class="profile-container">
+        <div class="profile-header">
+            <div class="profile-avatar">MS</div>
+            <h1>Miss ko na sya</h1>
+            <p>Miss mo? Edi  balikan mo</p>
+        </div>
+
+        <div class="profile-stats">
+            <div class="stat-card">
+                <div class="stat-number">10</div>
+                <div class="stat-label">Notes Created</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">3.8</div>
+                <div class="stat-label">Average GPA</div>
+            </div>
+        </div>
+
+        <div class="profile-section">
+            <h2>Personal Information</h2>
+            <div class="profile-info">
+                <div class="info-item">
+                    <span class="info-label">Full Name:</span>
+                    <span class="info-value">Emmanuel Zacarias</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Email:</span>
+                    <span class="info-value">emman@example.com</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Course:</span>
+                    <span class="info-value">BS Information Technology</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Year Level:</span>
+                    <span class="info-value">2nd Year</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-section">
+            <h2>Study Preferences</h2>
+            <div class="profile-info">
+                <div class="info-item">
+                    <span class="info-label">Preferred Time:</span>
+                    <span class="info-value">Morning</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Study Duration:</span>
+                    <span class="info-value">2-3 hours</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Notes Format:</span>
+                    <span class="info-value">Digital</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Quiz Frequency:</span>
+                    <span class="info-value">Weekly</span>
+                </div>
+            </div>
+        </div>
+
+        <button class="edit-profile-btn">Edit Profile</button>
+    </div>
 </body>
 </html>
