@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paki-Note! - Quiz</title>
     <link rel="stylesheet" href="../Assets/quiz.css">
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Righteous&family=Comfortaa:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -16,7 +16,7 @@
                 <a href="#"><i class="fas fa-th"></i> Features ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="notes.html"><i class="fas fa-sticky-note"></i> Notes</a></li>
-                    <li><a href="calendar.html"><i class="fas fa-calendar"></i> Calendar</a></li>
+                    <li><a href="calendar.html"><i class="fas fa-calendar-alt"></i> Calendar</a></li>
                     <li><a href="quiz.html"><i class="fas fa-question-circle"></i> Quiz</a></li>
                     <li><a href="gpa.html"><i class="fas fa-calculator"></i> GPA Calculator</a></li>
                     <li><a href="room.html"><i class="fas fa-door-open"></i> Rooms</a></li>
@@ -41,17 +41,17 @@
         <div class="quiz-setup">
             <div class="quiz-options">
                 <div class="option-group">
-                    <label for="categorySelect"><i class="fas fa-folder"></i> Select Category:</label>
+                    <label for="categorySelect">Select Category:</label>
                     <select id="categorySelect" class="quiz-select">
                         <option value="all">All Categories</option>
                     </select>
                 </div>
                 <div class="option-group">
-                    <label for="questionCount"><i class="fas fa-list-ol"></i> Number of Questions:</label>
+                    <label for="questionCount">Number of Questions:</label>
                     <input type="number" id="questionCount" min="1" max="20" value="5">
                 </div>
                 <div class="option-group">
-                    <label for="quizType"><i class="fas fa-tasks"></i> Question Type:</label>
+                    <label for="quizType">Question Type:</label>
                     <select id="quizType" class="quiz-select">
                         <option value="multiple">Multiple Choice</option>
                         <option value="truefalse">True/False</option>
@@ -59,9 +59,7 @@
                     </select>
                 </div>
             </div>
-            <button id="startQuiz" class="primary-btn">
-                <i class="fas fa-play"></i> Start Quiz
-            </button>
+            <button id="startQuiz" class="primary-btn">Start Quiz</button>
         </div>
 
         <div id="quizContainer" class="quiz-container">
