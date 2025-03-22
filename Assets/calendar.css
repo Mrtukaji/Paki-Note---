@@ -1,9 +1,10 @@
 body {
     font-family: 'Outfit', sans-serif;
-    background-color: #f4f7e8;
+    background: linear-gradient(135deg, #f4f7e8 0%, #e8f5e9 100%);
     color: #333;
     margin: 0;
     padding-top: 80px;
+    min-height: 100vh;
 }
 
 nav {
@@ -14,12 +15,9 @@ nav {
     left: 0;
     right: 0;
     z-index: 1000;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .nav-links {
@@ -32,18 +30,16 @@ nav {
     padding: 0;
 }
 
-.nav-links li {
-    position: relative;
-}
-
 .nav-links a {
     color: white;
     text-decoration: none;
     padding: 10px 15px;
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     transition: all 0.3s ease;
     font-size: 1.1em;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 .nav-links a:hover {
@@ -62,19 +58,17 @@ nav {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    width: 150px;
-    padding: 8px 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.dropdown-menu li {
-    padding: 0;
+    width: 200px;
+    padding: 12px 0;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-menu a {
-    padding: 10px 20px;
-    display: block;
+    padding: 12px 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     text-align: left;
     transition: all 0.3s ease;
 }
@@ -88,19 +82,14 @@ nav {
     display: block;
 }
 
-main {
-    max-width: 1200px;
-    margin: 130px auto 40px;
-    padding: 20px;
-}
-
 .calendar-container {
     max-width: 1200px;
     margin: 80px auto 40px;
-    padding: 20px;
+    padding: 30px;
     background: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(46, 125, 50, 0.1);
 }
 
 .calendar-header {
@@ -115,8 +104,11 @@ main {
 .calendar-header h1 {
     color: #2E7D32;
     font-family: 'Righteous', cursive;
-    font-size: 2em;
+    font-size: 2.5em;
     margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .calendar-controls {
@@ -125,19 +117,26 @@ main {
     gap: 20px;
 }
 
-.calendar-controls button {
-    background: none;
+.calendar-nav-btn {
+    background: #f8f9fa;
     border: none;
     font-size: 1.2em;
     color: #2E7D32;
     cursor: pointer;
-    padding: 8px;
+    padding: 12px;
     border-radius: 50%;
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
 }
 
-.calendar-controls button:hover {
-    background: #f0f0f0;
+.calendar-nav-btn:hover {
+    background: #e8f5e9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.1);
 }
 
 .calendar-controls h2 {
@@ -163,9 +162,19 @@ main {
     text-align: center;
     font-weight: 600;
     color: #666;
-    padding: 10px;
+    padding: 15px;
     background: #f8f9fa;
-    border-radius: 8px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.weekdays div:hover {
+    background: #e8f5e9;
+    color: #2E7D32;
 }
 
 .calendar-days {
@@ -176,10 +185,10 @@ main {
 
 .calendar-day {
     aspect-ratio: 1;
-    padding: 10px;
+    padding: 15px;
     background: white;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
@@ -188,6 +197,7 @@ main {
 .calendar-day:hover {
     background: #f8f9fa;
     transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .calendar-day.today {
@@ -202,6 +212,7 @@ main {
 .calendar-day .date {
     font-weight: 600;
     margin-bottom: 5px;
+    color: #333;
 }
 
 .calendar-day .event-dot {
@@ -221,23 +232,30 @@ main {
 
 .event-form {
     background: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid rgba(46, 125, 50, 0.1);
 }
 
 .event-form h3 {
     color: #2E7D32;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3em;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    color: #2E7D32;
     font-weight: 500;
 }
 
@@ -245,94 +263,124 @@ main {
 .form-group select,
 .form-group textarea {
     width: 100%;
-    padding: 8px 12px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
     font-size: 1em;
+    transition: all 0.3s ease;
+    background: white;
 }
 
-.form-group textarea {
-    height: 100px;
-    resize: vertical;
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2E7D32;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
 }
 
 .add-event-btn {
-    background: #2E7D32;
+    background: linear-gradient(145deg, #2E7D32, #1B5E20);
     color: white;
+    padding: 15px 30px;
     border: none;
-    padding: 10px 20px;
-    border-radius: 6px;
+    border-radius: 12px;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1.1em;
     transition: all 0.3s ease;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 500;
 }
 
 .add-event-btn:hover {
-    background: #1B5E20;
+    background: linear-gradient(145deg, #4CAF50, #2E7D32);
     transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.2);
 }
 
 .upcoming-events {
     background: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid rgba(46, 125, 50, 0.1);
 }
 
 .upcoming-events h3 {
     color: #2E7D32;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3em;
 }
 
 .events-list {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 15px;
 }
 
 .event-item {
     background: white;
     padding: 15px;
-    border-radius: 8px;
-    border-left: 4px solid #2E7D32;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.event-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .event-item h4 {
-    margin: 0 0 5px 0;
-    color: #333;
+    color: #2E7D32;
+    margin: 0 0 8px 0;
+    font-size: 1.1em;
 }
 
 .event-item p {
-    margin: 5px 0;
     color: #666;
+    margin: 0;
     font-size: 0.9em;
 }
 
 .event-item .event-time {
     color: #2E7D32;
     font-weight: 500;
+    margin-top: 8px;
 }
 
 @media (max-width: 768px) {
     .calendar-container {
-        margin: 60px 20px 40px;
-        padding: 15px;
+        margin: 60px auto 20px;
+        padding: 20px;
     }
-
+    
+    .calendar-header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .calendar-header h1 {
+        font-size: 2em;
+    }
+    
     .event-section {
         grid-template-columns: 1fr;
     }
-
-    .calendar-header {
-        flex-direction: column;
+    
+    .nav-links {
         gap: 15px;
-        text-align: center;
     }
-
-    .calendar-controls {
-        width: 100%;
-        justify-content: center;
+    
+    .nav-links a {
+        font-size: 1em;
+        padding: 8px 12px;
     }
 }
 

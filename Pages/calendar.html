@@ -11,25 +11,22 @@
 <body>
     <nav>
         <ul class="nav-links">
-            <li><a href="../Index.html">Home</a></li>
+            <li><a href="../Index.html"><i class="fas fa-home"></i> Home</a></li>
             <li class="dropdown">
-                <a href="#">Features ▼</a>
+                <a href="#"><i class="fas fa-th"></i> Features ▼</a>
                 <ul class="dropdown-menu">
-                    <li><a href="notes.html">Notes</a></li>
-                    <li><a href="calendar.html">Calendar</a></li>
-                    <li><a href="quiz.html">Quiz</a></li>
-                    <li><a href="gpa.html">GPA Calculator</a></li>
-                    <li><a href="room.html">Rooms</a></li>
+                    <li><a href="notes.html"><i class="fas fa-sticky-note"></i> Notes</a></li>
+                    <li><a href="calendar.html"><i class="fas fa-calendar-alt"></i> Calendar</a></li>
+                    <li><a href="quiz.html"><i class="fas fa-question-circle"></i> Quiz</a></li>
+                    <li><a href="gpa.html"><i class="fas fa-calculator"></i> GPA Calculator</a></li>
+                    <li><a href="room.html"><i class="fas fa-door-open"></i> Rooms</a></li>
                 </ul>
             </li>
-            <li><a href="../Index.html#contact">Contacts</a></li>
-            <li><a href="../Index.html#faq">FAQs</a></li>
-            <li><a href="../Index.html#about">About</a></li>
             <li class="dropdown">
-                <a href="#">Settings ▼</a>
+                <a href="#"><i class="fas fa-cog"></i> Settings ▼</a>
                 <ul class="dropdown-menu">
-                    <li><a href="../Pages(1)/option.html" id="toggleTheme">Options</a></li>
-                    <li><a href="../Pages(1)/profile.html" id="cleardata">Profile</a></li>
+                    <li><a href="../Pages(1)/option.html"><i class="fas fa-palette"></i> Options</a></li>
+                    <li><a href="../Pages(1)/profile.html"><i class="fas fa-user"></i> Profile</a></li>
                 </ul>
             </li>
         </ul>
@@ -37,23 +34,23 @@
 
     <div class="calendar-container">
         <div class="calendar-header">
-            <h1>Schedule Your Classes</h1>
+            <h1><i class="fas fa-calendar-check"></i> Schedule Your Classes</h1>
             <div class="calendar-controls">
-                <button id="prevMonth"><i class="fas fa-chevron-left"></i></button>
+                <button id="prevMonth" class="calendar-nav-btn"><i class="fas fa-chevron-left"></i></button>
                 <h2 id="currentMonth">Month & Year</h2>
-                <button id="nextMonth"><i class="fas fa-chevron-right"></i></button>
+                <button id="nextMonth" class="calendar-nav-btn"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
 
         <div class="calendar-grid">
             <div class="weekdays">
-                <div>Sun</div>
-                <div>Mon</div>
-                <div>Tue</div>
-                <div>Wed</div>
-                <div>Thu</div>
-                <div>Fri</div>
-                <div>Sat</div>
+                <div><i class="fas fa-sun"></i> Sun</div>
+                <div><i class="fas fa-calendar-day"></i> Mon</div>
+                <div><i class="fas fa-calendar-day"></i> Tue</div>
+                <div><i class="fas fa-calendar-day"></i> Wed</div>
+                <div><i class="fas fa-calendar-day"></i> Thu</div>
+                <div><i class="fas fa-calendar-day"></i> Fri</div>
+                <div><i class="fas fa-sat"></i> Sat</div>
             </div>
             <div id="calendarDays" class="calendar-days">
             </div>
@@ -61,39 +58,39 @@
 
         <div class="event-section">
             <div class="event-form">
-                <h3>Add New Event</h3>
+                <h3><i class="fas fa-plus-circle"></i> Add New Event</h3>
                 <form id="eventForm">
                     <div class="form-group">
-                        <label for="eventTitle">Event Title</label>
+                        <label for="eventTitle"><i class="fas fa-heading"></i> Event Title</label>
                         <input type="text" id="eventTitle" required placeholder="Enter event title">
                     </div>
                     <div class="form-group">
-                        <label for="eventDate">Date</label>
+                        <label for="eventDate"><i class="fas fa-calendar"></i> Date</label>
                         <input type="date" id="eventDate" required>
                     </div>
                     <div class="form-group">
-                        <label for="eventTime">Time</label>
+                        <label for="eventTime"><i class="fas fa-clock"></i> Time</label>
                         <input type="time" id="eventTime" required>
                     </div>
                     <div class="form-group">
-                        <label for="eventType">Type</label>
+                        <label for="eventType"><i class="fas fa-tag"></i> Type</label>
                         <select id="eventType" required>
-                            <option value="class">Class</option>
-                            <option value="exam">Exam</option>
-                            <option value="assignment">Assignment</option>
-                            <option value="other">Other</option>
+                            <option value="class"><i class="fas fa-chalkboard-teacher"></i> Class</option>
+                            <option value="exam"><i class="fas fa-file-alt"></i> Exam</option>
+                            <option value="assignment"><i class="fas fa-tasks"></i> Assignment</option>
+                            <option value="other"><i class="fas fa-star"></i> Other</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="eventDescription">Description</label>
+                        <label for="eventDescription"><i class="fas fa-align-left"></i> Description</label>
                         <textarea id="eventDescription" placeholder="Enter event description"></textarea>
                     </div>
-                    <button type="submit" class="add-event-btn">Add Event</button>
+                    <button type="submit" class="add-event-btn"><i class="fas fa-plus"></i> Add Event</button>
                 </form>
             </div>
 
             <div class="upcoming-events">
-                <h3>Upcoming Events</h3>
+                <h3><i class="fas fa-list"></i> Upcoming Events</h3>
                 <div id="eventsList" class="events-list">
                 </div>
             </div>
