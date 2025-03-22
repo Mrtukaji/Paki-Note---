@@ -57,13 +57,18 @@
 
                 <div class="form-group">
                     <label for="course">Course</label>
-                    <select id="course" name="course" required class="form-input">
+                    <select id="course" name="course" required class="form-input" onchange="toggleCustomCourse()">
                         <option value="">Select your course</option>
                         <option value="bsit">BSIT</option>
                         <option value="bscs">BSCS</option>
                         <option value="bsis">BSEMC</option>
                         <option value="other">Other</option>
                     </select>
+                </div>
+
+                <div class="form-group" id="customCourseGroup" style="display: none;">
+                    <label for="customCourse">Custom Course</label>
+                    <input type="text" id="customCourse" name="customCourse" class="form-input" placeholder="Enter your course">
                 </div>
 
                 <div class="form-group checkbox-group">
@@ -79,5 +84,21 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function toggleCustomCourse() {
+            const courseSelect = document.getElementById('course');
+            const customCourseGroup = document.getElementById('customCourseGroup');
+            const customCourseInput = document.getElementById('customCourse');
+            
+            if (courseSelect.value === 'other') {
+                customCourseGroup.style.display = 'block';
+                customCourseInput.required = true;
+            } else {
+                customCourseGroup.style.display = 'none';
+                customCourseInput.required = false;
+            }
+        }
+    </script>
 </body>
 </html> 
