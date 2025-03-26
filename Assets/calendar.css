@@ -49,8 +49,6 @@ nav {
     display: none;
     position: absolute;
     background: rgba(46, 125, 50, 0.95);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     list-style: none;
     top: 100%;
     left: 50%;

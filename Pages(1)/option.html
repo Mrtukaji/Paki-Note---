@@ -6,6 +6,119 @@
     <title>Options - Paki-Note!</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Righteous&family=Comfortaa:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../Assets/styles.css">
+    <style>
+        .options-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .options-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--bg-primary);
+            border-radius: 8px;
+        }
+
+        .options-section h2 {
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .theme-options, .font-options, .notification-options, .language-options {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .option-button {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Comfortaa', sans-serif;
+            transition: all 0.3s ease;
+            background: var(--accent-color);
+            color: black;
+        }
+
+        .option-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .font-size-control {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .font-size-control input[type="range"] {
+            flex: 1;
+        }
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: var(--accent-color);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        .setting-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding: 0.5rem 0;
+        }
+
+        .setting-item label {
+            font-family: 'Comfortaa', sans-serif;
+            color: var(--text-primary);
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -36,11 +149,77 @@
 
     <div class="options-container">
         <h1>Options</h1>
+        
         <div class="options-section">
             <h2>Theme Settings</h2>
             <div class="theme-options">
-                <button id="lightTheme">Light Theme</button>
-                <button id="darkTheme">Dark Theme</button>
+                <button id="lightTheme" class="option-button">Light Theme</button>
+                <button id="darkTheme" class="option-button">Dark Theme</button>
+            </div>
+        </div>
+
+        <div class="options-section">
+            <h2>Font Settings</h2>
+            <div class="font-options">
+                <div class="font-size-control">
+                    <label for="fontSize">Font Size:</label>
+                    <input type="range" id="fontSize" min="12" max="24" value="16">
+                </div>
+                <div class="font-family-control">
+                    <label for="fontFamily">Font Family:</label>
+                    <select id="fontFamily" class="option-button">
+                        <option value="Comfortaa">Comfortaa</option>
+                        <option value="Outfit">Outfit</option>
+                        <option value="Arial">Arial</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="options-section">
+            <h2>Notification Settings</h2>
+            <div class="notification-options">
+                <div class="setting-item">
+                    <label for="emailNotifications">Email Notifications</label>
+                    <label class="toggle-switch" aria-label="Toggle email notifications">
+                        <input type="checkbox" id="emailNotifications" aria-label="Email notifications toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="setting-item">
+                    <label for="pushNotifications">Push Notifications</label>
+                    <label class="toggle-switch" aria-label="Toggle push notifications">
+                        <input type="checkbox" id="pushNotifications" aria-label="Push notifications toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="setting-item">
+                    <label for="studyReminders">Study Reminders</label>
+                    <label class="toggle-switch" aria-label="Toggle study reminders">
+                        <input type="checkbox" id="studyReminders" aria-label="Study reminders toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="options-section">
+            <h2>Language Settings</h2>
+            <div class="language-options">
+                <select id="language" class="option-button" aria-label="Select language">
+                    <option value="en">English</option>
+                    <option value="ur">اردو</option>
+                    <option value="ar">العربية</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="options-section">
+            <h2>Data Management</h2>
+            <div class="data-options">
+                <button id="exportData" class="option-button">Export Data</button>
+                <button id="importData" class="option-button">Import Data</button>
+                <button id="clearData" class="option-button">Clear All Data</button>
             </div>
         </div>
     </div>
