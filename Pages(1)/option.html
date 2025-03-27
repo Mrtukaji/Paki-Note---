@@ -6,139 +6,6 @@
     <title>Options - Paki-Note!</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Righteous&family=Comfortaa:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../Assets/styles.css">
-    <style>
-        .options-container {
-            max-width: 800px;
-            margin: 100px auto 40px;
-            padding: 30px;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        }
-
-        .options-section {
-            margin-bottom: 30px;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 12px;
-            border: 1px solid #e0e0e0;
-        }
-
-        .options-section h2 {
-            color: #2E7D32;
-            margin-bottom: 20px;
-            font-size: 1.5em;
-        }
-
-        .theme-options {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-        }
-
-        .theme-options button {
-            padding: 12px 20px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: all 0.3s ease;
-        }
-
-        .theme-options button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        #lightTheme {
-            background: #ffffff;
-            color: #333;
-            border: 1px solid #ddd;
-        }
-
-        #darkTheme {
-            background: #333;
-            color: #fff;
-        }
-
-        .color-scheme {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 15px;
-        }
-
-        .color-option {
-            padding: 20px;
-            border-radius: 8px;
-            cursor: pointer;
-            text-align: center;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .color-option:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .font-size-options {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 15px;
-        }
-
-        .font-size-option {
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .font-size-option:hover {
-            background: #e8f5e9;
-            border-color: #2E7D32;
-        }
-
-        .layout-options {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-        }
-
-        .layout-option {
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .layout-option:hover {
-            background: #e8f5e9;
-            border-color: #2E7D32;
-        }
-
-        .preview-box {
-            margin-top: 20px;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background: white;
-        }
-
-        .preview-box h3 {
-            margin-top: 0;
-            color: #2E7D32;
-        }
-
-        .preview-text {
-            margin: 10px 0;
-            line-height: 1.6;
-        }
-    </style>
 </head>
 <body>
     <nav>
@@ -168,13 +35,77 @@
     </nav>
 
     <div class="options-container">
-        <h1>Customize Your Experience</h1>
-        
+        <h1>Options</h1>
         <div class="options-section">
             <h2>Theme Settings</h2>
             <div class="theme-options">
-                <button id="lightTheme">Light Theme</button>
-                <button id="darkTheme">Dark Theme</button>
+                <button id="lightTheme" class="option-button">Light Theme</button>
+                <button id="darkTheme" class="option-button">Dark Theme</button>
+            </div>
+        </div>
+
+        <div class="options-section">
+            <h2>Font Settings</h2>
+            <div class="font-options">
+                <div class="font-size-control">
+                    <label for="fontSize">Font Size:</label>
+                    <input type="range" id="fontSize" min="12" max="24" value="16">
+                </div>
+                <div class="font-family-control">
+                    <label for="fontFamily">Font Family:</label>
+                    <select id="fontFamily" class="option-button">
+                        <option value="Comfortaa">Comfortaa</option>
+                        <option value="Outfit">Outfit</option>
+                        <option value="Arial">Arial</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="options-section">
+            <h2>Notification Settings</h2>
+            <div class="notification-options">
+                <div class="setting-item">
+                    <label for="emailNotifications">Email Notifications</label>
+                    <label class="toggle-switch" aria-label="Toggle email notifications">
+                        <input type="checkbox" id="emailNotifications" aria-label="Email notifications toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="setting-item">
+                    <label for="pushNotifications">Push Notifications</label>
+                    <label class="toggle-switch" aria-label="Toggle push notifications">
+                        <input type="checkbox" id="pushNotifications" aria-label="Push notifications toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="setting-item">
+                    <label for="studyReminders">Study Reminders</label>
+                    <label class="toggle-switch" aria-label="Toggle study reminders">
+                        <input type="checkbox" id="studyReminders" aria-label="Study reminders toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="options-section">
+            <h2>Language Settings</h2>
+            <div class="language-options">
+                <select id="language" class="option-button" aria-label="Select language">
+                    <option value="en">English</option>
+                    <option value="ur">اردو</option>
+                    <option value="ar">العربية</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="options-section">
+            <h2>Data Management</h2>
+            <div class="data-options">
+                <button id="exportData" class="option-button">Export Data</button>
+                <button id="importData" class="option-button">Import Data</button>
+                <button id="clearData" class="option-button">Clear All Data</button>
             </div>
         </div>
 
