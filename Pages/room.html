@@ -90,12 +90,26 @@
         <div class="map-section">
             <h2>Campus Map</h2>
             <div class="map-container">
-                <!-- Placeholder for map -->
-                <div class="map-placeholder">
-                    <p>Interactive map will be displayed here</p>
+                <div class="floor-selector">
+                    <button class="floor-btn active" data-floor="1">1st Floor</button>
+                    <button class="floor-btn" data-floor="2">2nd Floor</button>
+                    <button class="floor-btn" data-floor="3">3rd Floor</button>
+                    <button class="floor-btn" data-floor="4">4th Floor</button>
+                    <button class="floor-btn" data-floor="5">5th Floor</button>
+                    <button class="floor-btn" data-floor="6">6th Floor</button>
+                </div>
+                <div class="floor-plans">
+                    <img src="../images/floor plan/1st floor.jpg" alt="1st Floor Plan" class="floor-plan active" data-floor="1">
+                    <img src="../images/floor plan/2nd floor.jpg" alt="2nd Floor Plan" class="floor-plan" data-floor="2">
+                    <img src="../images/floor plan/3rd floor.jpg" alt="3rd Floor Plan" class="floor-plan" data-floor="3">
+                    <img src="../images/floor plan/4th floor.jpg" alt="4th Floor Plan" class="floor-plan" data-floor="4">
+                    <img src="../images/floor plan/5th floor.jpg" alt="5th Floor Plan" class="floor-plan" data-floor="5">
+                    <img src="../images/floor plan/6th floor.jpg" alt="6th Floor Plan" class="floor-plan" data-floor="6">
                 </div>
             </div>
         </div>
     </div>
+    <!-- Add this before the closing body tag -->
+    <script src="../Script/room.js"></script>
 </body>
 </html>

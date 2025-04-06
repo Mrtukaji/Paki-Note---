@@ -211,10 +211,62 @@ h2 {
 
 .map-container {
     width: 100%;
-    height: 400px;
-    background: #f4f7e8;
+    height: 600px;
+    background: white;
     border-radius: 8px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.floor-selector {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #D4E157;
+}
+
+.floor-btn {
+    padding: 8px 16px;
+    border: 2px solid #2E7D32;
+    background: white;
+    color: #2E7D32;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.floor-btn.active {
+    background: #2E7D32;
+    color: white;
+}
+
+.floor-btn:hover {
+    background: #e8f5e9;
+    transform: translateY(-2px);
+}
+
+.floor-plans {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.floor-plan {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: none;
+    padding: 20px;
+}
+
+.floor-plan.active {
+    display: block;
 }
 
 .map-placeholder {
