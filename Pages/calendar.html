@@ -33,29 +33,60 @@
     </nav>
 
     <div class="calendar-container">
-        <h1>Schedule Your Classes</h1>
+        <h1>School Calendar</h1>
         
         <div class="calendar-layout">
             <div class="calendar-header">
-                <button class="nav-btn" id="prevMonth">Previous</button>
-                <h2 id="currentMonth">Month Year</h2>
-                <button class="nav-btn" id="nextMonth">Next</button>
+                <button class="nav-btn" id="prevMonth">◄</button>
+                <h2 id="currentMonth">April 2025</h2>
+                <button class="nav-btn" id="nextMonth">►</button>
             </div>
-
-            <div class="weekdays">
-                <div>Sun</div>
-                <div>Mon</div>
-                <div>Tue</div>
-                <div>Wed</div>
-                <div>Thu</div>
-                <div>Fri</div>
-                <div>Sat</div>
-            </div>
-
-            <div class="calendar-days" id="calendarDays">
-                <!-- Days will be added here dynamically -->
+    
+            <div class="calendar-grid">
+                <div class="weekdays">
+                    <div class="sunday">Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+    
+                <div class="calendar-days" id="calendarDays">
+                    <!-- Days will be added dynamically -->
+                </div>
             </div>
         </div>
+    </div>
+    
+    <!-- Schedule Modal -->
+    <div id="scheduleModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="selectedDate"></h2>
+            <form id="scheduleForm">
+                <div class="form-group">
+                    <label for="className">Class Name:</label>
+                    <input type="text" id="className" required>
+                </div>
+                <div class="form-group">
+                    <label for="classTime">Time:</label>
+                    <input type="time" id="classTime" required>
+                </div>
+                <div class="form-group">
+                    <label for="professor">Professor:</label>
+                    <input type="text" id="professor">
+                </div>
+                <div class="form-group">
+                    <label for="room">Room:</label>
+                    <input type="text" id="room">
+                </div>
+                <button type="submit" class="save-btn">Save Schedule</button>
+            </form>
+        </div>
+    </div>
+</div>
 
         <div class="event-section">
             <div class="add-event">
