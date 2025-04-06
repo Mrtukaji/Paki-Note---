@@ -37,31 +37,33 @@
         
         <div class="calculator-section">
             <div class="course-form">
-                <h2>Add Course</h2>
+                <h2>Add Subject</h2>
                 <div class="form-group">
-                    <input type="text" id="courseName" placeholder="Course Name" class="form-input">
+                    <input type="text" id="courseName" placeholder="Subject Name" class="form-input">
+                    <input type="number" id="courseUnits" placeholder="Units" class="form-input" min="1" max="6">
                     <select id="courseGrade" class="form-input" title="Select a grade">
                         <option value="">Select Grade</option>
-                        <option value="5.0">1.0 (99 - 100)</option>
-                        <option value="4.0">1.1 (98 -97)</option>
-                        <option value="3.5">1.2 (96 - 95)</option>
-                        <option value="3.0">1.3 (94 - 93)</option>
-                        <option value="2.5">1.4 (92 - 91)</option>
-                        <option value="2.0">1.5 (90)</option>
-                        <option value="1.5">1.6 (89)</option>
-                        <option value="1.0">1.7 (88)</option>
-                        <option value="0.5">1.8 (87)</option>
-                        <option value="0.0">1.9 (86)</option>
-                        <option value="0.0">2.0 (85)</option>
+                        <option value="1.0">1.0 (95-100) Excellent</option>
+                        <option value="1.25">1.25 (91-94) Superior</option>
+                        <option value="1.5">1.5 (87-90) Very Good</option>
+                        <option value="1.75">1.75 (83-86) Good</option>
+                        <option value="2.0">2.0 (79-82) Satisfactory</option>
+                        <option value="2.25">2.25 (75-78) Fair</option>
+                        <option value="2.5">2.5 (72-74) Pass</option>
+                        <option value="2.75">2.75 (69-71) Conditional</option>
+                        <option value="3.0">3.0 (65-68) Conditional</option>
+                        <option value="5.0">5.0 (64 below) Failed</option>
+                        <option value="INC">INC (Incomplete)</option>
+                        <option value="DRP">DRP (Dropped)</option>
                     </select>
                 </div>
-                <button id="addCourse" class="add-course-btn">Add Course</button>
+                <button id="addCourse" class="add-course-btn">Add Subject</button>
             </div>
 
             <div class="course-list">
-                <h2>Your Courses</h2>
+                <h2>Your Subjects</h2>
                 <div id="coursesList" class="courses-container">
-                    <!-- Courses will be added here dynamically -->
+                    <!-- Subjects will be added here dynamically -->
                 </div>
             </div>
 
@@ -70,34 +72,44 @@
                     <h3>Current GPA</h3>
                     <div class="gpa-value" id="currentGPA">0.00</div>
                     <div class="gpa-details">
-                        <p>Total Credits: <span id="totalCredits">0</span></p>
-                        <p>Total Points: <span id="totalPoints">0.00</span></p>
+                        <p>Total Units: <span id="totalCredits">0</span></p>
+                        <p>Remarks: <span id="remarks">-</span></p>
                     </div>
                 </div>
-                <button id="clearAll" class="clear-btn">Clear All Courses</button>
+                <button id="clearAll" class="clear-btn">Clear All Subjects</button>
             </div>
         </div>
 
         <div class="info-section">
-            <h2>GPA Information</h2>
+            <h2>Grading System</h2>
             <div class="info-cards">
                 <div class="info-card">
                     <h3>Grade Scale</h3>
-                    <ul class="grade-scale">
-                        <li>1.0 (Excellent)</li>
-                        <li>1.25 (Very Good)</li>
-                        <li>1.5 (Good)</li>
-                        <li>1.75 (Above Average)</li>
-                        <li>2.0 (Average)</li>
-                    </ul>
+                    <table class="grade-table">
+                        <tr>
+                            <th>Grade Point</th>
+                            <th>Percentage</th>
+                            <th>Remarks</th>
+                        </tr>
+                        <tr><td>1.0</td><td>95-100</td><td>Excellent</td></tr>
+                        <tr><td>1.25</td><td>91-94</td><td>Superior</td></tr>
+                        <tr><td>1.5</td><td>87-90</td><td>Very Good</td></tr>
+                        <tr><td>1.75</td><td>83-86</td><td>Good</td></tr>
+                        <tr><td>2.0</td><td>79-82</td><td>Satisfactory</td></tr>
+                        <tr><td>2.25</td><td>75-78</td><td>Fair</td></tr>
+                        <tr><td>2.5</td><td>72-74</td><td>Pass</td></tr>
+                        <tr><td>2.75</td><td>69-71</td><td>Conditional</td></tr>
+                        <tr><td>3.0</td><td>65-68</td><td>Conditional</td></tr>
+                        <tr><td>5.0</td><td>64 below</td><td>Failed</td></tr>
+                    </table>
                 </div>
                 <div class="info-card">
-                    <h3>Tips</h3>
+                    <h3>GPA Guide</h3>
                     <ul class="tips-list">
-                        <li>Enter all your courses for accurate GPA calculation</li>
-                        <li>Include both completed and in-progress courses</li>
-                        <li>Double-check credit hours for each course</li>
-                        <li>Regularly save your progress</li>
+                        <li>Enter all your subjects with their corresponding units</li>
+                        <li>Grades are based on the Philippine grading system</li>
+                        <li>INC (Incomplete) and DRP (Dropped) are not counted in GPA</li>
+                        <li>The lower the GPA, the better the academic performance</li>
                     </ul>
                 </div>
             </div>
