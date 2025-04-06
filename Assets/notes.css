@@ -185,23 +185,18 @@ h1 {
 
 .inpt {
     width: 100%;
-    height: 500px;
-    font-size: 16px;
+    min-height: 250px;
     padding: 15px;
-    border: 1px solid #D4E157;
+    margin: 10px 0;
+    border: 2px solid #ccc;
     border-radius: 8px;
-    background: white;
-    line-height: 1.6;
+    font-size: 16px;
     resize: vertical;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    font-family: 'Outfit', sans-serif;
 }
 
 #inpt-container {
-    grid-column: 1 / 2;
-    align-self: start;
-    width: 100%;
+    width: 80%;
+    margin: 20px auto;
 }
 
 #note-container {
