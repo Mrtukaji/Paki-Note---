@@ -232,20 +232,17 @@ button:active {
 }
 
 .calendar_btn {
-    background: linear-gradient(145deg, #ff7043, #f4511e);
+    background: linear-gradient(145deg, #2196F3, #1976D2);
+}
+
+.calendar_btn:hover {
+    background: linear-gradient(145deg, #42A5F5, #2196F3);
 }
 
 .calendar_btn:hover {
     background: linear-gradient(145deg, #ff8a65, #ff7043);
 }
 
-.quiz_btn {
-    background: linear-gradient(145deg, #26c6da, #00acc1);
-}
-
-.quiz_btn:hover {
-    background: linear-gradient(145deg, #4dd0e1, #26c6da);
-}
 
 .gpa_btn {
     background: linear-gradient(145deg, #7e57c2, #673ab7);
@@ -465,7 +462,6 @@ button:active {
     }
 }
 
-/* Small phones */
 @media (max-width: 480px) {
     h1 {
         font-size: 2.5em;
@@ -504,7 +500,6 @@ button:active {
     }
 }
 
-/* Tablet optimization */
 @media (min-width: 769px) and (max-width: 1024px) {
     #welcome .button-container {
         max-width: 800px;
@@ -519,7 +514,6 @@ button:active {
     }
 }
 
-/* Navigation menu for mobile */
 @media (max-width: 768px) {
     nav {
         overflow-x: auto;
@@ -545,7 +539,6 @@ button:active {
     }
 }
 
-/* Improve touch targets on mobile */
 @media (hover: none) {
     button,
     .nav-links a,
@@ -568,7 +561,6 @@ button:active {
     }
 }
 
-/* Fix button hover effects on mobile */
 @media (hover: none) {
     button::before {
         display: none;
@@ -579,28 +571,24 @@ button:active {
     }
 }
 
-/* Maintain aspect ratio for buttons on different screens */
 .button-container button {
     aspect-ratio: 16/9;
     max-height: 150px;
 }
 
-/* Add smooth transitions for layout changes */
 * {
     transition: all 0.3s ease;
 }
 
-/* Optimize images and backgrounds for mobile */
 @media (max-width: 768px) {
     body {
         background: linear-gradient(135deg, #e0f7fa 0%, #e8f5e9 100%);
     }
 }
 
-/* Improve form usability on mobile */
 @media (max-width: 768px) {
     input, textarea, select, button {
-        font-size: 16px !important; /* Prevent zoom on iOS */
+        font-size: 16px !important;
     }
 
     textarea {
@@ -608,7 +596,6 @@ button:active {
     }
 }
 
-/* Add rainbow border animation for contact form */
 @keyframes borderAnimation {
     0% { border-color: #673ab7; }
     33% { border-color: #26c6da; }
@@ -619,8 +606,7 @@ button:active {
 .contact {
     animation: borderAnimation 10s infinite;
 }
-
-/* FAQ section styling update */
+ 
 .faq-question {
     background: #f4f7e8;
     border: 1px solid #D4E157;
