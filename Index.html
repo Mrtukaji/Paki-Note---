@@ -20,103 +20,42 @@
           <li class="dropdown">
             <a href="#">Features ▼</a> <!-- THE FEATURES DROPDOWN MENU -->
             <ul class="dropdown-menu">
-              <li><a href="Pages/notes.html">Notes</a></li>
-              <li><a href="Pages/calendar.html">Calendar</a></li>
-              <li><a href="Pages/quiz.html">Quiz</a></li>
-              <li><a href="Pages/gpa.html">GPA Calculator</a></li>
-              <li><a href="Pages/room.html">Rooms</a></li>
-            </ul>                                                  <!-- HI SIR REY, gawa namin ni Serafica toh lahat hehehe-->
-          </li>
-          <li><a href="#contact">Contacts</a></li>
-          <li><a href="#faq">FAQs</a></li>
-          <li><a href="#about">About</a></li>
-          <li class="auth-buttons">
-            <a href="Pages/login.html" class="login-btn">Login</a>
-            <a href="Pages/signup.html" class="signup-btn">Sign Up</a>
-          </li>
-          <li class="dropdown">
-            <a href="#">Settings ▼</a> <!-- THE SETTINGS -->
-            <ul class="dropdown-menu">
-              <li><a href="Pages(1)/option.html" id="toggleTheme">Options</a></li>
-              <li><a href="Pages(1)/profile.html" id="cleardata">Profile</a></li>
+                <li><a href="Pages/notes.html">Notes</a></li>
+                <li><a href="Pages/calendar.html">Calendar</a></li>
+                <!-- Quiz link removed -->
+                <li><a href="Pages/gpa.html">GPA Calculator</a></li>
+                <li><a href="Pages/room.html">Rooms</a></li>
             </ul>
-          </li>
-        </ul>
-      </nav>
-          
-    <div id="welcome">
-        <h1>Paki-Note!</h1> 
-        <p>Your personal study companion!</p>
-        <div class="button-container"> <!-- The buttons para sa features -->
-            <button onclick="location.href='Pages/notes.html'">
-                <span>Take Notes!</span>
-            </button>        
-            <button onclick="location.href='Pages/calendar.html'" class="calendar_btn">Manage Calendar!</button>
-            <button onclick="location.href='Pages/quiz.html'" class="quiz_btn">Take Quiz!</button>
-            <button onclick="location.href='Pages/gpa.html'" class="gpa_btn">Calculate GPA!</button>
-            <button onclick="location.href='Pages/room.html'" class="Map_btn">Locate Room!</button>
-        </div>
-    </div>
-    <p class="bltext">With this Site, we can help YOU <br><b>Organize Schedules,
-         Take Notes & Challenge yourself into taking quizzes <br> Making you study better!</b> 
-    </p>
-
-    <section class="about" id="about">
-        <div class="about-container"> <!-- About Section -->
-          <h1>About Paki-Note!</h1>
-        <p>Paki Note! is a simple yet powerful tool designed for college students to
-            <b>Organize schedules, Take notes more effectively, and Generate quizzes based on your notes</b> effortlessly.
-        </p>
-      
-          <h2>Major Features:</h2>
-          <ul>
-            <li>Note-Taking - Categorize and format notes with ease.</li>
-            <li>Schedule - Manage your tasks with a calendar.</li>
-            <li>Auto-Generated Quizzes - Turn notes into interactive quizzes.</li>
-            <li>GPA Calculator - Calculate your GPA with ease.</li>
-            <li>Map - Check the map of you college!.</li>
-          </ul>
-      
-          <h2> Why Use Paki-Note?</h2>
-        <p>We all know how <b>Overwhelming</b> college life can be.
-            <br>Especially for many first year students. <br> 
-            But with Paki-Note! we help students <br><b>Stay organized, Save time, 
-            and Study smarter.</b> 
-            <br>No complicated setups, just a <b>simple and intuitive</b> experience.
-        
-        </p>
-        </div>
-      </section>
-
-      <section class="faq" id="faq">
-        <div class="faq-container"> <!-- FAQ Section -->
-          <h2>Frequently Asked Questions</h2>
-      
-          <div class="faq-item"> 
-            <button class="faq-question">How does Paki-Note! work?</button>
-            <div class="faq-answer">
-              <p>"Paki-Note! lets you create Categorized notes, fixs your messy schedule, 
-                and generate quizzes based on your notes. Everything is stored in your local browser."</p>
+            
+            <!-- In the button container, remove the quiz button -->
+            <div class="button-container">
+                <button onclick="location.href='Pages/notes.html'">
+                    <span>Take Notes!</span>
+                </button>        
+                <button onclick="location.href='Pages/calendar.html'" class="calendar_btn">Manage Calendar!</button>
+                <!-- Quiz button removed -->
+                <button onclick="location.href='Pages/gpa.html'" class="gpa_btn">Calculate GPA!</button>
+                <button onclick="location.href='Pages/room.html'" class="Map_btn">Locate Room!</button>
             </div>
-          </div>
-      
-          <div class="faq-item">                                      
-            <button class="faq-question">How does the GPA Calculator work?</button>
-            <div class="faq-answer">
-              <p>"The GPA Calculator works by taking the total number of credits you have and the total number of grade points you have. 
-                It then divides the total grade points by the total number of credits to give you your GPA."</p>
+            
+            <!-- In the Major Features list -->
+            <ul>
+                <li>Note-Taking - Categorize and format notes with ease.</li>
+                <li>Schedule - Manage your tasks with a calendar.</li>
+                <!-- Auto-Generated Quizzes item removed -->
+                <li>GPA Calculator - Calculate your GPA with ease.</li>
+                <li>Map - Check the map of you college!.</li>
+            </ul>
+            
+            <!-- Remove the quiz-related FAQ item -->
+            <!-- Remove this entire div -->
+            <div class="faq-item">
+                <button class="faq-question">How are the quizzes generated?</button>
+                <div class="faq-answer">
+                    <p>"Quizzes are automatically created using key points from your recent saved notes. 
+                        You can choose between <b>multiple-choice, fill-in-the-blanks, and true/false questions.</b>"</p>
+                </div>
             </div>
-          </div>
-      
-          <div class="faq-item">
-            <button class="faq-question">How are the quizzes generated?</button>
-            <div class="faq-answer">
-              <p>"Quizzes are automatically created using key points from your recent saved notes. 
-                You can choose between <b>multiple-choice, fill-in-the-blanks, and true/false questions.</b>"</p>
-            </div>
-          </div>
-      
-          <div class="faq-item">
             <button class="faq-question">Can I customize my notes?</button>
             <div class="faq-answer">
               <p>"Ofcourse! You can change fonts, colors, and organize notes by subject or categories".</p>
@@ -139,7 +78,7 @@
         </div>
       </section>
 
-    <section class="contact" id="contact"> <!-- Contact Section -->
+      <section class="contact" id="contact"> <!-- Contact Section -->
         <h2>Get in Touch with us!</h2>
         <p>Have questions or feedback? Let us know!</p>
       
