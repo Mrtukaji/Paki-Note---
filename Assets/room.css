@@ -60,7 +60,7 @@ h2 {
     font-family: 'Outfit', sans-serif;
 }
 
-.search-btn {
+.search-btn, .add-class-btn {
     background: linear-gradient(145deg, #2E7D32, #1B5E20);
     color: white;
     border: none;
@@ -71,9 +71,17 @@ h2 {
     transition: all 0.3s ease;
 }
 
-.search-btn:hover {
+.add-class-btn {
+    background: linear-gradient(145deg, #673ab7, #5e35b1);
+}
+
+.search-btn:hover, .add-class-btn:hover {
     background: linear-gradient(145deg, #D4E157, #2E7D32);
     transform: translateY(-2px);
+}
+
+.add-class-btn:hover {
+    background: linear-gradient(145deg, #9575cd, #673ab7);
 }
 
 .filter-options {
@@ -123,28 +131,10 @@ h2 {
 }
 
 .room-header h3 {
-    color: #2c3e50;
+    color: white;
     font-size: 1.4em;
     margin: 0;
     font-weight: 600;
-}
-
-.room-card {
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.room-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #f0f0f0;
-    padding-bottom: 10px;
 }
 
 .room-type {
@@ -167,38 +157,79 @@ h2 {
     color: #2E7D32;
 }
 
-.room-actions {
-    padding: 15px 20px;
-    display: flex;
-    gap: 10px;
-    border-top: 1px solid #f4f7e8;
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
 }
 
-.directions-btn,
-.schedule-btn {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    border-radius: 6px;
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
     cursor: pointer;
-    font-size: 0.9em;
-    transition: all 0.3s ease;
 }
 
-.directions-btn {
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #2E7D32;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #D4E157;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.submit-btn {
     background: linear-gradient(145deg, #2E7D32, #1B5E20);
     color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
 }
 
-.schedule-btn {
-    background: linear-gradient(145deg, #26c6da, #00acc1);
-    color: white;
-}
-
-.directions-btn:hover,
-.schedule-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.submit-btn:hover {
+    background: linear-gradient(145deg, #D4E157, #2E7D32);
 }
 
 .map-section {
@@ -280,6 +311,15 @@ h2 {
     font-size: 1.2em;
 }
 
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
 @media (max-width: 768px) {
     .room-container {
         margin: 100px auto 20px;
@@ -302,12 +342,13 @@ h2 {
         width: 100%;
     }
 
-    .room-actions {
-        flex-direction: column;
-    }
-
     .map-container {
         height: 300px;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
     }
 }
 
@@ -329,6 +370,59 @@ h2 {
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
+}
+
+.edit-btn {
+    background: linear-gradient(145deg, #26c6da, #00acc1);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+}
+
+.edit-btn:hover {
+    background: linear-gradient(145deg, #4dd0e1, #26c6da);
+    transform: translateY(-2px);
+}
+
+.delete-btn {
+    background: linear-gradient(145deg, #f44336, #d32f2f);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+    background: linear-gradient(145deg, #ef5350, #e53935);
+    transform: translateY(-2px);
+}
+
+.room-actions {
+    padding: 0 20px 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close-edit {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-edit:hover,
+.close-edit:focus {
+    color: black;
+    text-decoration: none;
 }
 
 

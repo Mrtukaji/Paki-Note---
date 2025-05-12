@@ -36,11 +36,12 @@
         <div class="search-section">
             <div class="search-box">
                 <input type="text" id="roomSearch" placeholder="Enter room number or building name...">
-                <button class="search-btn">Search</button>
+                <button class="search-btn" id="searchButton">Search</button>
+                <button class="add-class-btn" id="addClassButton">Add Class</button>
             </div>
             <div class="filter-options">
                 <select id="floorFilter" title="Select a floor">
-                    <option value="">Select a floor</option>
+                    <option value="">All Floors</option>
                     <option value="1">1st Floor</option>
                     <option value="2">2nd Floor</option>
                     <option value="3">3rd Floor</option>
@@ -51,38 +52,103 @@
             </div>
         </div>
 
-        <div class="results-section">
-            <div class="room-card">
-                <div class="room-header">
-                    <h3>Room 406</h3>
-                    <span class="room-type">Lecture</span>
-                </div>
-                <div class="room-details">
-                    <p><strong>Subject:</strong> Computer Science</p>
-                    <p><strong>Floor:</strong> 4th Floor</p>
-                    <p><strong>Students:</strong> 29 students</p>
-                    <p><strong>Professor:</strong> Hazel  Espinorio</p>
-                </div>
-                <div class="room-actions">
-                    <button class="directions-btn">Get Directions</button>
-                </div>
+        <!-- Add Class Modal -->
+        <!-- Add Class Modal -->
+        <div id="addClassModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Add New Class</h2>
+                <form id="addClassForm">
+                    <div class="form-group">
+                        <label for="roomNumber">Room Number:</label>
+                        <input type="text" id="roomNumber" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="roomType">Room Type:</label>
+                        <select id="roomType" required>
+                            <option value="Lecture">Lecture</option>
+                            <option value="Laboratory">Laboratory</option>
+                            <option value="Conference">Conference</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="floor">Floor:</label>
+                        <select id="floor" required>
+                            <option value="1">1st Floor</option>
+                            <option value="2">2nd Floor</option>
+                            <option value="3">3rd Floor</option>
+                            <option value="4">4th Floor</option>
+                            <option value="5">5th Floor</option>
+                            <option value="6">6th Floor</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="professor">Professor:</label>
+                        <input type="text" id="professor" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Class Time:</label>
+                        <input type="text" id="time" placeholder="e.g., 9:00 AM - 10:30 AM" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Add Class</button>
+                </form>
             </div>
+        </div>
 
-            <div class="room-card">
-                <div class="room-header">
-                    <h3>Room 101</h3>
-                    <span class="room-type">Laboratory</span>
-                </div>
-                <div class="room-details">
-                    <p><strong>Subject:</strong> Human Computer Interaction</p>
-                    <p><strong>Floor:</strong> 5th Floor</p>
-                    <p><strong>Students:</strong> 29 students</p>
-                    <p><strong>Professor:</strong> Rey Bautista</p>
-                </div>
-                <div class="room-actions">
-                    <button class="directions-btn">Get Directions</button>
-                </div>
+        <!-- After the Add Class Modal -->
+        <!-- Edit Class Modal -->
+        <div id="editClassModal" class="modal">
+            <div class="modal-content">
+                <span class="close-edit">&times;</span>
+                <h2>Edit Class</h2>
+                <form id="editClassForm">
+                    <input type="hidden" id="editIndex">
+                    <div class="form-group">
+                        <label for="editRoomNumber">Room Number:</label>
+                        <input type="text" id="editRoomNumber" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editRoomType">Room Type:</label>
+                        <select id="editRoomType" required>
+                            <option value="Lecture">Lecture</option>
+                            <option value="Laboratory">Laboratory</option>
+                            <option value="Conference">Conference</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="editSubject">Subject:</label>
+                        <input type="text" id="editSubject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editFloor">Floor:</label>
+                        <select id="editFloor" required>
+                            <option value="1">1st Floor</option>
+                            <option value="2">2nd Floor</option>
+                            <option value="3">3rd Floor</option>
+                            <option value="4">4th Floor</option>
+                            <option value="5">5th Floor</option>
+                            <option value="6">6th Floor</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="editProfessor">Professor:</label>
+                        <input type="text" id="editProfessor" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editTime">Class Time:</label>
+                        <input type="text" id="editTime" placeholder="e.g., 9:00 AM - 10:30 AM" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Update Class</button>
+                </form>
             </div>
+        </div>
+
+        <div class="results-section" id="resultsContainer">
+            <!-- Room cards will be dynamically added here -->
         </div>
 
         <div class="map-section">
