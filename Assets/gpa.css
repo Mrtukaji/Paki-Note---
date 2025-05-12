@@ -181,6 +181,25 @@ h3 {
     border-radius: 8px;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
     border: 1px solid #D4E157;
+    max-height: 500px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #D4E157 #f4f7e8;
+}
+
+.course-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.course-list::-webkit-scrollbar-track {
+    background: #f4f7e8;
+    border-radius: 10px;
+}
+
+.course-list::-webkit-scrollbar-thumb {
+    background-color: #D4E157;
+    border-radius: 10px;
+    border: 2px solid #f4f7e8;
 }
 
 .courses-container {
@@ -190,28 +209,40 @@ h3 {
 }
 
 .course-item {
-    background: #f4f7e8;
-    padding: 15px;
-    border-radius: 8px;
+    background: #f9f9f9;
+    padding: 15px 20px;
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border: 1px solid #D4E157;
+    transition: all 0.3s ease;
+    animation: slideIn 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    margin-bottom: 10px;
+}
+
+.course-item:hover {
+    background: #f4f7e8;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
 }
 
 .course-info {
     flex: 1;
+    padding-right: 15px;
 }
 
 .course-name {
     font-weight: 600;
     color: #2E7D32;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    font-size: 1.1em;
 }
 
 .course-details {
     font-size: 0.9em;
     color: #666;
+    line-height: 1.4;
 }
 
 .delete-course {
@@ -220,13 +251,30 @@ h3 {
     color: #ff7043;
     cursor: pointer;
     font-size: 1.2em;
-    padding: 5px 10px;
+    padding: 8px;
     transition: all 0.3s ease;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .delete-course:hover {
-    color: #f4511e;
-    transform: scale(1.1);
+    color: white;
+    background-color: #ff7043;
+}
+
+/* Empty state styling */
+#coursesList p {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+    padding: 30px 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: 1px dashed #ddd;
 }
 
 .gpa-result {
@@ -297,6 +345,146 @@ h3 {
     border-radius: 8px;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
     border: 1px solid #D4E157;
+}
+
+.grade-scale, .tips-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.grade-scale li, .tips-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f4f7e8;
+    color: #666;
+}
+
+.grade-scale li:last-child, .tips-list li:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .gpa-container {
+        margin: 100px auto 20px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    .calculator-section {
+        grid-template-columns: 1fr;
+    }
+
+    .gpa-result {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .clear-btn {
+        width: 100%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.grade-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+.grade-table th,
+.grade-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.grade-table th {
+    background-color: #f5f5f5;
+}
+
+.grade-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#courseUnits {
+    width: 80px;
+    margin-right: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.form-input {
+    padding: 12px;
+    border: 2px solid #D4E157;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: 'Outfit', sans-serif;
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+#courseUnits {
+    width: 80px;
+    flex: 0 0 auto;
+}
+
+.result-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid #D4E157;
+}
+
+.result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gpa-value {
+    font-size: 3.5em;
+    font-weight: 700;
+    font-family: 'Righteous', cursive;
+    margin: 10px 0;
+    transition: all 0.3s ease;
+}
+
+#remarks {
+    font-weight: bold;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: #f1f8e9;
+    transition: all 0.3s ease;
+}
+
+/* Empty state styling */
+#coursesList p {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+    padding: 20px;
 }
 
 .grade-scale, .tips-list {

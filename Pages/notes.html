@@ -65,6 +65,17 @@
 
         <div id="note-container">
             <h3>Your notes:</h3>
+            <!-- Add search and filter controls -->
+            <div class="search-filter-container">
+                <div class="search-box">
+                    <input type="text" id="search-notes" placeholder="Search notes...">
+                </div>
+                <div class="filter-box">
+                    <select id="filter-category" title="Filter by category">
+                        <option value="all">All Categories</option>
+                    </select>
+                </div>
+            </div>
             <ul id="note-list" class="note-list"></ul>
         </div>
 

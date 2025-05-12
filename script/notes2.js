@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const newCategoryInput = document.getElementById('new-category');
     const addCategoryBtn = document.getElementById('add-category');
     const categoryList = document.getElementById('category-list');
+    const searchInput = document.getElementById('search-notes');
+    const filterCategory = document.getElementById('filter-category');
 
     const fontSizeSelect = document.getElementById('font-size');
     const boldBtn = document.getElementById('bold-btn');
@@ -34,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function saveCategoriesToStorage() {
         localStorage.setItem('categories', JSON.stringify(categories));
         updateCategorySelect();
+        updateFilterCategories();
     }
 
     function updateTextFormatting() {
@@ -87,6 +90,19 @@ document.addEventListener('DOMContentLoaded', function() {
             option.value = category;
             option.textContent = category;
             categorySelect.appendChild(option);
+        });
+    }
+
+    function updateFilterCategories() {
+        // Keep the "All Categories" option
+        filterCategory.innerHTML = '<option value="all">All Categories</option>';
+        
+        // Add all categories as options
+        categories.sort().forEach(category => {
+            const option = document.createElement('option');
+            option.value = category;
+            option.textContent = category;
+            filterCategory.appendChild(option);
         });
     }
 
@@ -197,17 +213,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function displayNotes() {
         noteList.innerHTML = '';
-        notes.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
         
-        if (notes.length === 0) {
+        // Get search and filter values
+        const searchTerm = searchInput.value.toLowerCase();
+        const filterValue = filterCategory.value;
+        
+        // Filter notes based on search term and category
+        let filteredNotes = notes.filter(note => {
+            const matchesSearch = note.text.toLowerCase().includes(searchTerm);
+            const matchesCategory = filterValue === 'all' || note.category === filterValue;
+            return matchesSearch && matchesCategory;
+        });
+        
+        // Sort notes by timestamp (newest first)
+        filteredNotes.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+        
+        if (filteredNotes.length === 0) {
             const emptyMessage = document.createElement('p');
             emptyMessage.className = 'empty-message';
-            emptyMessage.textContent = 'No notes yet. Start writing!';
+            
+            if (notes.length === 0) {
+                emptyMessage.textContent = 'No notes yet. Start writing!';
+            } else {
+                emptyMessage.textContent = 'No notes match your search or filter criteria.';
+            }
+            
             noteList.appendChild(emptyMessage);
             return;
         }
         
-        notes.forEach(note => {
+        filteredNotes.forEach(note => {
             const noteElement = createNoteElement(note);
             noteList.appendChild(noteElement);
         });
@@ -241,6 +276,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Add event listeners for search and filter
+    searchInput.addEventListener('input', displayNotes);
+    filterCategory.addEventListener('change', displayNotes);
+
     manageCategories.addEventListener('click', () => {
         modal.style.display = 'block';
         displayCategories();
@@ -268,10 +307,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     updateCategorySelect();
+    updateFilterCategories();
     displayNotes();
     updateTextFormatting();
 
     toggleFormatButton(boldBtn, currentFormatting.isBold);
     toggleFormatButton(italicBtn, currentFormatting.isItalic);
     toggleFormatButton(underlineBtn, currentFormatting.isUnderline);
-}); 
+});

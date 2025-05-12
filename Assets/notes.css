@@ -655,3 +655,45 @@ h3 {
     color: #666;
     font-size: 0.8em;
 }
+
+/* Add these styles at the end of your CSS file */
+
+.search-filter-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    border: 1px solid #D4E157;
+}
+
+.search-box {
+    flex: 2;
+}
+
+.filter-box {
+    flex: 1;
+}
+
+#search-notes, #filter-category {
+    width: 100%;
+    padding: 10px 15px;
+    border: 2px solid #D4E157;
+    border-radius: 8px;
+    font-size: 1.1em;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+#search-notes:focus, #filter-category:focus {
+    border-color: #2E7D32;
+    box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.1);
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .search-filter-container {
+        flex-direction: column;
+    }
+}
