@@ -39,7 +39,7 @@
             font-family: 'Outfit', sans-serif;
         }
 
-        .theme-options, .font-options, .notification-options, .language-options {
+        .theme-options, .font-options, .notification-options, .language-options, .data-options {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 15px;
@@ -74,6 +74,20 @@
 
         .font-size-control input[type="range"] {
             flex: 1;
+        }
+        
+        .font-family-control {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .font-family-control select {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background: white;
+            font-family: 'Comfortaa', sans-serif;
         }
 
         .toggle-switch {
@@ -212,14 +226,6 @@
 
     <div class="options-container">
         <h1>Customize Your Experience</h1>
-        
-        <div class="options-section">
-            <h2>Theme Settings</h2>
-            <div class="theme-options">
-                <button id="lightTheme" class="option-button">Light Theme</button>
-                <button id="darkTheme" class="option-button">Dark Theme</button>
-            </div>
-        </div>
 
         <div class="options-section">
             <h2>Font Settings</h2>
@@ -230,7 +236,7 @@
                 </div>
                 <div class="font-family-control">
                     <label for="fontFamily">Font Family:</label>
-                    <select id="fontFamily" class="option-button">
+                    <select id="fontFamily">
                         <option value="Comfortaa">Comfortaa</option>
                         <option value="Outfit">Outfit</option>
                         <option value="Arial">Arial</option>
@@ -249,20 +255,6 @@
                         <span class="slider"></span>
                     </label>
                 </div>
-                <div class="setting-item">
-                    <label for="pushNotifications">Push Notifications</label>
-                    <label class="toggle-switch" aria-label="Toggle push notifications">
-                        <input type="checkbox" id="pushNotifications" aria-label="Push notifications toggle">
-                        <span class="slider"></span>
-                    </label>
-                </div>
-                <div class="setting-item">
-                    <label for="studyReminders">Study Reminders</label>
-                    <label class="toggle-switch" aria-label="Toggle study reminders">
-                        <input type="checkbox" id="studyReminders" aria-label="Study reminders toggle">
-                        <span class="slider"></span>
-                    </label>
-                </div>
             </div>
         </div>
 
@@ -272,34 +264,6 @@
                 <button id="exportData" class="option-button">Export Data</button>
                 <button id="importData" class="option-button">Import Data</button>
                 <button id="clearData" class="option-button">Clear All Data</button>
-            </div>
-        </div>
-
-        <div class="options-section">
-            <h2>Color Scheme</h2>
-            <div class="color-scheme">
-                <div class="color-option" style="background: #2E7D32; color: white;">Green</div>
-                <div class="color-option" style="background: #1976D2; color: white;">Blue</div>
-                <div class="color-option" style="background: #9C27B0; color: white;">Purple</div>
-                <div class="color-option" style="background: #FF5722; color: white;">Orange</div>
-            </div>
-        </div>
-
-        <div class="options-section">
-            <h2>Font Size</h2>
-            <div class="font-size-options">
-                <div class="font-size-option">Small</div>
-                <div class="font-size-option">Medium</div>
-                <div class="font-size-option">Large</div>
-            </div>
-        </div>
-
-        <div class="options-section">
-            <h2>Layout Preference</h2>
-            <div class="layout-options">
-                <div class="layout-option">Compact</div>
-                <div class="layout-option">Standard</div>
-                <div class="layout-option">Spacious</div>
             </div>
         </div>
 
